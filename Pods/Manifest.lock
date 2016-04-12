@@ -1,0 +1,69 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.0.5)
+  - Alamofire (3.3.1)
+  - DACircularProgress (2.3.1)
+  - IDMPhotoBrowser (1.8.3):
+    - DACircularProgress
+    - pop
+    - SDWebImage
+  - IQKeyboardManager (4.0.1)
+  - JSQWebViewController (3.0.0)
+  - Kanna (1.0.6)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.0)
+  - NYXImagesKit (2.3)
+  - pop (1.0.9)
+  - RDVTabBarController (1.1.9)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SSKeychain (1.4.0)
+  - SWXMLHash (2.3.1)
+  - UIAlertController+Blocks (0.9)
+  - UIImage+Additions (2.1.0)
+  - UIImage+BlurredFrame (0.0.4)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - Alamofire
+  - IDMPhotoBrowser
+  - IQKeyboardManager
+  - JSQWebViewController
+  - Kanna
+  - MagicalRecord
+  - MBProgressHUD
+  - MJRefresh
+  - NYXImagesKit
+  - RDVTabBarController
+  - SDWebImage
+  - SSKeychain
+  - SWXMLHash (~> 2.3.0)
+  - UIAlertController+Blocks
+  - UIImage+Additions
+  - UIImage+BlurredFrame
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  IDMPhotoBrowser: a9a548910f24a6db53775fa6b6a6101262b20d63
+  IQKeyboardManager: 0c11a0cb402a621f7aa1aff506f60ab6d2388969
+  JSQWebViewController: eaa6bd68d9e1426ae25ade99c9bbde4c6cdd4120
+  Kanna: 9f30945bbd293a609f698ea164687ccc0990ff60
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+  SWXMLHash: 795c66e74f4cc9473ad6465c6653c5a6f59f417e
+  UIAlertController+Blocks: b48c673ff60726da468b32ab21bbc7683512d45b
+  UIImage+Additions: 6181430b139099649e56171d58a52d6c37d57e42
+  UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
+
+COCOAPODS: 0.39.0
