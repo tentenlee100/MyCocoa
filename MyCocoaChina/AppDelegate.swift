@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import MagicalRecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var managedObjectContext : NSManagedObjectContext?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.setupCoreData()
+        
         return true
     }
 
@@ -41,6 +44,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func setupCoreData() -> Void {
+        
+        
+        let fileManager = NSFileManager.defaultManager()
+        let storeURL = NSPersistentStore.MR_urlForStoreName(kRecipesStoreName as String)
+        
+        if fileManager.fileExistsAtPath((storeURL?.path)!) {
+            let defaultStorePath = NSBundle.mainBundle().pathForResource(kRecipesStoreName.stringByDeletingPathExtension, ofType: kRecipesStoreName.pathExtension)
+            if ((defaultStorePath) != nil) {
+                do{
+                    try fileManager.copyItemAtPath(defaultStorePath!, toPath: (storeURL?.path)!)
+                } catch _ as NSError{
+                    print("Failed to install default recipe store")
+                }
+            }
+        }
+        
+        MagicalRecord.setupCoreDataStackWithStoreNamed(kRecipesStoreName as String)
+        self.managedObjectContext = NSManagedObjectContext.MR_defaultContext();
+            
+    }
 }
 

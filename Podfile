@@ -19,3 +19,4 @@ pod 'IQKeyboardManager'
 pod 'SWXMLHash', '~> 2.3.0'
 pod 'Kanna'
 pod 'JSQWebViewController'
+

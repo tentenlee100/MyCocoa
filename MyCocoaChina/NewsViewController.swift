@@ -15,7 +15,7 @@ import MJRefresh
 import JSQWebViewController
 
 
-class NewsViewController: UIViewController,UITableViewDelegate {
+class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet var tableView : UITableView?
     
     var tableViewArray:[Dictionary<String,String>] = []
@@ -64,108 +64,141 @@ class NewsViewController: UIViewController,UITableViewDelegate {
         let footer = MJRefreshAutoNormalFooter.init {
             self.callMoreApi()
         }
+        footer.setTitle("正在更新中", forState: .Refreshing)
+        footer.setTitle("已無資料", forState: .NoMoreData)
+        footer.setTitle("上滑繼續載入", forState: .Idle)
+
         self.tableView?.mj_header = header
         self.tableView?.mj_footer = footer
+        self.tableView?.mj_footer.endRefreshingWithNoMoreData()
         self.tableView?.mj_header.beginRefreshing()
     }
     func callRootApi() -> Void {
-//old -----------------
-        
-//        let doc = Kanna.HTML(url: NSURL.init(string: rootApiUrl())!, encoding: NSUTF8StringEncoding)
-//        var array: [Dictionary<String, String>] = []
-//        for ul in doc!.body!.xpath("//ul[@class='roll-list']//li//a") {
-//            array.append(["title":ul.text!,"link":ul["href"]! ])
-//        }
-//        self.tableViewArray = array
-//        self.tableView?.reloadData()
-//        print("array:\(array)")
-        
-//-----------------
-        //old
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            // 耗时的操作
-            let doc = Kanna.HTML(url: NSURL.init(string: rootApiUrl())!, encoding: NSUTF8StringEncoding)
-            var array: [Dictionary<String, String>] = []
-            var dic : Dictionary<String, String> = [:]
-            
-            for ul in doc!.body!.xpath("//li[@class='articlelist clearfix']/p/a | //li[@class='articlelist clearfix']/div/div/a/img |//li[@class='articlelist clearfix']/div/div[@class='con']/p | //li[@class='articlelist clearfix']/div/div/p[@class='click']/span") {
+
+        self.tableView?.mj_footer.endRefreshingWithNoMoreData()
+
+        Alamofire.request(.GET, rootApiUrl() , parameters: nil)
+            .responseData { response in
+                print(response.request)
+                print(response.response)
+                print(response.result)
                 
-                if (ul.tagName == "a" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic = [:]
-                    dic["title"] = ul.text
+                var htmlString = NSString(data: response.data!, encoding:NSUTF8StringEncoding)
+                
+                let openCCService = OpenCCService.init(converterType: .S2TW)
+                
+                htmlString = openCCService.convert(htmlString! as String)
+                
+                let doc = Kanna.HTML(html: htmlString as! String , encoding: NSUTF8StringEncoding)
+                //                let doc = Kanna.HTML(url: NSURL.init(string: rootApiUrl())!, encoding: NSUTF8StringEncoding)
+                var array: [Dictionary<String, String>] = []
+                var dic : Dictionary<String, String> = [:]
+                
+                for ul in doc!.body!.xpath("//li[@class='articlelist clearfix']/p/a | //li[@class='articlelist clearfix']/div/div/a/img |//li[@class='articlelist clearfix']/div/div[@class='con']/p | //li[@class='articlelist clearfix']/div/div/p[@class='click']/span") {
+                    
+                    if (ul.tagName == "a" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                        dic = [:]
+                        dic["title"] = ul.text
+                    }
+                    if (ul["href"]?.characters.count > 0) {
+                        let url = ul["href"] ?? ""
+                        let idRange = url.rangeOfString("id")
+                        dic["newsId"] = url.substringWithRange(idRange!.startIndex.advancedBy(3) ..< url.endIndex)
+
+                        dic["url"] = url
+                    }
+                    if (ul["src"]?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                        dic["imageUrl"] = ul["src"]
+                    }
+                    if (ul["class"] == "article_con" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                        dic["con"] = ul.text
+                    }
+                    if (ul.tagName == "span" && ul["class"] == nil &&  ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                        dic["date"] = ul.text
+                        array.append(dic)
+                    }
                 }
-                if (ul["href"]?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["url"] = ul["href"]
-                }
-                if (ul["src"]?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["imageUrl"] = ul["src"]
-                }
-                if (ul["class"] == "article_con" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["con"] = ul.text
-                }
-                if (ul.tagName == "span" && ul["class"] == nil &&  ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["date"] = ul.text
-                    array.append(dic)
-                }
-            }
-            dispatch_async(dispatch_get_main_queue(), {
-                // 更新界面
+
                 self.tableViewArray = array
                 self.tableView?.reloadData()
                 //        print("array:\(array)")
                 self.tableView?.mj_header.endRefreshing()
-                
+
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(0.5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()){
-                    self.callMoreApi()
+                    self.tableView?.mj_footer.resetNoMoreData()
+                    self.tableView?.mj_footer.beginRefreshing()
                 }
-            });
-        });
+                
+        }
 
     }
     
     func callMoreApi() -> Void {
-        print(morePageApiUrl(pageNumber))
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            // 耗时的操作
-            let doc = Kanna.HTML(url: NSURL.init(string:morePageApiUrl(self.pageNumber))!, encoding: NSUTF8StringEncoding)
-            if ((doc) == nil) {
-                return
-            }
-            var array: [Dictionary<String, String>] = []
-            var dic : Dictionary<String, String> = [:]
-            print(doc)
-            for ul in doc!.body!.xpath("//li[@class='articlelist clearfix']/p/a | //li[@class='articlelist clearfix']/div/div/a/img |//li[@class='articlelist clearfix']/div/div[@class='con']/p | //li[@class='articlelist clearfix']/div/div/p[@class='click']/span") {
+        Alamofire.request(.GET, morePageApiUrl(self.pageNumber) , parameters: nil)
+            .responseData { response in
+                print(response.request)
+                print(response.response)
+                print(response.result)
                 
-                if (ul.tagName == "a" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic = [:]
-                    dic["title"] = ul.text
+                if response.result.isFailure
+                {
+                    return
                 }
-                if (ul["href"]?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["url"] = ul["href"]
-                }
-                if (ul["src"]?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["imageUrl"] = ul["src"]
-                }
-                if (ul.tagName == "p" && ul["class"] != "click" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["con"] = ul.text
-                }
-                if (ul.tagName == "span" && ul["class"] == nil &&  ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
-                    dic["date"] = ul.text
-                    array.append(dic)
-                }
-            }
-            dispatch_async(dispatch_get_main_queue(), {
-                // 更新界面
-                self.tableViewArray += array
-                self.tableView?.reloadData()
-                self.pageNumber += 1
-                self.tableView?.mj_footer.endRefreshing()
-            });
-        });
-        
-        
+                
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+                    
+                    var htmlString = NSString(data: response.data!, encoding:NSUTF8StringEncoding)
+                    
+                    let openCCService = OpenCCService.init(converterType: .S2TW)
+                    htmlString = openCCService.convert(htmlString! as String)
+                    
+                    let doc = Kanna.HTML(html: htmlString as! String , encoding: NSUTF8StringEncoding)
+                    
+                    if ((doc) == nil) {
+                        return
+                    }
+                    
+                    var array: [Dictionary<String, String>] = []
+                    var dic : Dictionary<String, String> = [:]
+                    
+                    for ul in doc!.body!.xpath("//li[@class='articlelist clearfix']/p/a | //li[@class='articlelist clearfix']/div/div/a/img |//li[@class='articlelist clearfix']/div/div[@class='con']/p | //li[@class='articlelist clearfix']/div/div/p[@class='click']/span") {
+                        
+                        if (ul.tagName == "a" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                            dic = [:]
+                            dic["title"] = ul.text
+                        }
+                        if (ul["href"]?.characters.count > 0) {
+                            let url = ul["href"] ?? ""
+                            let idRange = url.rangeOfString("id")
+                            dic["newsId"] = url.substringWithRange(idRange!.startIndex.advancedBy(3) ..< url.endIndex)
+                            dic["url"] = url
+                        }
+                        if (ul["src"]?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                            dic["imageUrl"] = ul["src"]
+                        }
+                        if (ul.tagName == "p" && ul["class"] != "click" && ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                            dic["con"] = ul.text
+                        }
+                        if (ul.tagName == "span" && ul["class"] == nil &&  ul.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0) {
+                            dic["date"] = ul.text
+                            array.append(dic)
+                        }
+                    }
+
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.tableViewArray += array
+                        self.tableView?.reloadData()
+                        self.pageNumber += 1
+                        self.tableView?.mj_footer.endRefreshing()
+                    })
+                })
+                
+
+                
+                
+        }
         
 
         
@@ -174,40 +207,51 @@ class NewsViewController: UIViewController,UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
         
+        let data = ReadNewsData.MR_findFirstByAttribute("newsId", withValue: self.tableViewArray[indexPath.row]["newsId"]!)
+        
+        if  (data == nil && self.tableViewArray[indexPath.row]["newsId"] != nil ){
+            let newsId = ReadNewsData.MR_createEntity()
+            newsId?.newsId = self.tableViewArray[indexPath.row]["newsId"]!
+            managedObjectContext().MR_saveToPersistentStoreAndWait()
+        }
+        
+        if ((self.tableView?.mj_footer) != nil){
+            let  cell = tableView.cellForRowAtIndexPath(indexPath) as! NewsCell
+            cell.updateLabelColor(true)
+        }
+
+        
         let myVc = MyWebViewController.loadFromStoryboard()
         myVc?.title = self.tableViewArray[indexPath.row]["title"]!
-//        myVc?.hidesBottomBarWhenPushed = true
         myVc!.url = NSURL(string: "http://www.cocoachina.com/cms/\(self.tableViewArray[indexPath.row]["url"]!)")!
-        
+        myVc!.dataDic = self.tableViewArray[indexPath.row]
         self.navigationController?.pushViewController(myVc!, animated: true)
         
-        
-//        if #available(iOS 9.0, *) {
-//            let svc = SFSafariViewController(URL: NSURL(string: "http://www.cocoachina.com/cms/\(self.tableViewArray[indexPath.row]["url"]!)")!)
-//            self.presentViewController(svc, animated: true, completion: nil)
-//            
-//        } else {
-//            // Fallback on earlier versions
-//            let vc = WebViewController.init(url: NSURL(string: "http://www.cocoachina.com/cms/\(self.tableViewArray[indexPath.row]["url"]!)")!)
-//            vc.hidesBottomBarWhenPushed = true
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
+
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section:Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
         return self.tableViewArray.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsCell
         cell.titleLabel!.text = self.tableViewArray[indexPath.row]["title"]
         cell.photoImageView!.sd_setImageWithURL(NSURL(string: self.tableViewArray[indexPath.row]["imageUrl"]!),completed:{ (image: UIImage!, error: NSError!, cacheType: SDImageCacheType!, imageURL: NSURL!) -> Void in
-            //            (self.tableView?.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade))!
         })
         cell.conLabel?.text = self.tableViewArray[indexPath.row]["con"]
         cell.dateLabel?.text = self.tableViewArray[indexPath.row]["date"]
 
+        let data = ReadNewsData.MR_findFirstByAttribute("newsId", withValue: self.tableViewArray[indexPath.row]["newsId"]!)
+
+        if  (data != nil && self.tableViewArray[indexPath.row]["newsId"] != nil ){
+            cell.updateLabelColor(true)
+        }else{
+            cell.updateLabelColor(false)
+
+        }
+        
         
         return cell
     }

@@ -17,6 +17,52 @@
 		A1A51AF81CBB793300D38F3B /* SettingValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AF71CBB793300D38F3B /* SettingValue.swift */; };
 		A1A51AFA1CBB7ECA00D38F3B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AF91CBB7ECA00D38F3B /* NewsCell.swift */; };
 		A1A51AFD1CBD06FC00D38F3B /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */; };
+		A1A51BA11CBE10E200D38F3B /* OpenCCService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BA01CBE10E200D38F3B /* OpenCCService.mm */; };
+		A1A51BF61CBE139200D38F3B /* BinaryDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BCC1CBE139200D38F3B /* BinaryDict.cpp */; };
+		A1A51BF71CBE139200D38F3B /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD01CBE139200D38F3B /* Config.cpp */; };
+		A1A51BF81CBE139200D38F3B /* Conversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD21CBE139200D38F3B /* Conversion.cpp */; };
+		A1A51BF91CBE139200D38F3B /* ConversionChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD41CBE139200D38F3B /* ConversionChain.cpp */; };
+		A1A51BFA1CBE139200D38F3B /* Converter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD61CBE139200D38F3B /* Converter.cpp */; };
+		A1A51BFB1CBE139200D38F3B /* DartsDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD81CBE139200D38F3B /* DartsDict.cpp */; };
+		A1A51BFC1CBE139200D38F3B /* Dict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BDA1CBE139200D38F3B /* Dict.cpp */; };
+		A1A51BFD1CBE139200D38F3B /* DictEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BDC1CBE139200D38F3B /* DictEntry.cpp */; };
+		A1A51BFE1CBE139200D38F3B /* DictGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BDE1CBE139200D38F3B /* DictGroup.cpp */; };
+		A1A51BFF1CBE139200D38F3B /* MaxMatchSegmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BE31CBE139200D38F3B /* MaxMatchSegmentation.cpp */; };
+		A1A51C001CBE139200D38F3B /* PhraseExtract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BE71CBE139200D38F3B /* PhraseExtract.cpp */; };
+		A1A51C011CBE139200D38F3B /* Segmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BE91CBE139200D38F3B /* Segmentation.cpp */; };
+		A1A51C021CBE139200D38F3B /* SimpleConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BED1CBE139200D38F3B /* SimpleConverter.cpp */; };
+		A1A51C031CBE139200D38F3B /* TextDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BF01CBE139200D38F3B /* TextDict.cpp */; };
+		A1A51C041CBE139200D38F3B /* UTF8StringSlice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BF21CBE139200D38F3B /* UTF8StringSlice.cpp */; };
+		A1A51C051CBE139200D38F3B /* UTF8Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BF41CBE139200D38F3B /* UTF8Util.cpp */; };
+		A1A51C141CBE13A600D38F3B /* HKVariants.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C071CBE13A600D38F3B /* HKVariants.txt */; };
+		A1A51C151CBE13A600D38F3B /* HKVariantsPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C081CBE13A600D38F3B /* HKVariantsPhrases.txt */; };
+		A1A51C161CBE13A600D38F3B /* HKVariantsRevPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C091CBE13A600D38F3B /* HKVariantsRevPhrases.txt */; };
+		A1A51C171CBE13A600D38F3B /* JPVariants.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0A1CBE13A600D38F3B /* JPVariants.txt */; };
+		A1A51C181CBE13A600D38F3B /* STCharacters.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0B1CBE13A600D38F3B /* STCharacters.txt */; };
+		A1A51C191CBE13A600D38F3B /* STPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0C1CBE13A600D38F3B /* STPhrases.txt */; };
+		A1A51C1A1CBE13A600D38F3B /* TSCharacters.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0D1CBE13A600D38F3B /* TSCharacters.txt */; };
+		A1A51C1B1CBE13A600D38F3B /* TSPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0E1CBE13A600D38F3B /* TSPhrases.txt */; };
+		A1A51C1C1CBE13A600D38F3B /* TWPhrasesIT.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0F1CBE13A600D38F3B /* TWPhrasesIT.txt */; };
+		A1A51C1D1CBE13A600D38F3B /* TWPhrasesName.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C101CBE13A600D38F3B /* TWPhrasesName.txt */; };
+		A1A51C1E1CBE13A600D38F3B /* TWPhrasesOther.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C111CBE13A600D38F3B /* TWPhrasesOther.txt */; };
+		A1A51C1F1CBE13A600D38F3B /* TWVariants.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C121CBE13A600D38F3B /* TWVariants.txt */; };
+		A1A51C201CBE13A600D38F3B /* TWVariantsRevPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C131CBE13A600D38F3B /* TWVariantsRevPhrases.txt */; };
+		A1A51C2C1CBE13B600D38F3B /* hk2s.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C221CBE13B600D38F3B /* hk2s.json */; };
+		A1A51C2D1CBE13B600D38F3B /* s2hk.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C231CBE13B600D38F3B /* s2hk.json */; };
+		A1A51C2E1CBE13B600D38F3B /* s2t.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C241CBE13B600D38F3B /* s2t.json */; };
+		A1A51C2F1CBE13B600D38F3B /* s2tw.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C251CBE13B600D38F3B /* s2tw.json */; };
+		A1A51C301CBE13B600D38F3B /* s2twp.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C261CBE13B600D38F3B /* s2twp.json */; };
+		A1A51C311CBE13B600D38F3B /* t2hk.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C271CBE13B600D38F3B /* t2hk.json */; };
+		A1A51C321CBE13B600D38F3B /* t2s.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C281CBE13B600D38F3B /* t2s.json */; };
+		A1A51C331CBE13B600D38F3B /* t2tw.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C291CBE13B600D38F3B /* t2tw.json */; };
+		A1A51C341CBE13B600D38F3B /* tw2s.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C2A1CBE13B600D38F3B /* tw2s.json */; };
+		A1A51C351CBE13B600D38F3B /* tw2sp.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C2B1CBE13B600D38F3B /* tw2sp.json */; };
+		A1A51C3B1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C391CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld */; };
+		A1A51C4C1CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C481CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift */; };
+		A1A51C4D1CBE32AF00D38F3B /* ReadNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C491CBE32AF00D38F3B /* ReadNewsData.swift */; };
+		A1A51C4E1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C4A1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift */; };
+		A1A51C4F1CBE32AF00D38F3B /* CollectionNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C4B1CBE32AF00D38F3B /* CollectionNewsData.swift */; };
+		A1A51C511CBE430400D38F3B /* NewsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C501CBE430400D38F3B /* NewsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +90,91 @@
 		A1A51AF71CBB793300D38F3B /* SettingValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingValue.swift; sourceTree = "<group>"; };
 		A1A51AF91CBB7ECA00D38F3B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
+		A1A51B9F1CBE10E200D38F3B /* OpenCCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCCService.h; sourceTree = "<group>"; };
+		A1A51BA01CBE10E200D38F3B /* OpenCCService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCCService.mm; sourceTree = "<group>"; };
+		A1A51BBE1CBE133B00D38F3B /* darts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = darts.h; sourceTree = "<group>"; };
+		A1A51BC01CBE136000D38F3B /* document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		A1A51BC11CBE136000D38F3B /* filestream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
+		A1A51BC31CBE136D00D38F3B /* pow10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
+		A1A51BC41CBE136D00D38F3B /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		A1A51BC51CBE136D00D38F3B /* strfunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strfunc.h; sourceTree = "<group>"; };
+		A1A51BC61CBE137500D38F3B /* prettywriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prettywriter.h; sourceTree = "<group>"; };
+		A1A51BC71CBE137500D38F3B /* rapidjson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rapidjson.h; sourceTree = "<group>"; };
+		A1A51BC81CBE137500D38F3B /* reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		A1A51BC91CBE137500D38F3B /* stringbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
+		A1A51BCA1CBE137500D38F3B /* writer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		A1A51BCC1CBE139200D38F3B /* BinaryDict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryDict.cpp; sourceTree = "<group>"; };
+		A1A51BCD1CBE139200D38F3B /* BinaryDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryDict.hpp; sourceTree = "<group>"; };
+		A1A51BCE1CBE139200D38F3B /* CmdLineOutput.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CmdLineOutput.hpp; sourceTree = "<group>"; };
+		A1A51BCF1CBE139200D38F3B /* Common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Common.hpp; sourceTree = "<group>"; };
+		A1A51BD01CBE139200D38F3B /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		A1A51BD11CBE139200D38F3B /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
+		A1A51BD21CBE139200D38F3B /* Conversion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Conversion.cpp; sourceTree = "<group>"; };
+		A1A51BD31CBE139200D38F3B /* Conversion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Conversion.hpp; sourceTree = "<group>"; };
+		A1A51BD41CBE139200D38F3B /* ConversionChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConversionChain.cpp; sourceTree = "<group>"; };
+		A1A51BD51CBE139200D38F3B /* ConversionChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConversionChain.hpp; sourceTree = "<group>"; };
+		A1A51BD61CBE139200D38F3B /* Converter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Converter.cpp; sourceTree = "<group>"; };
+		A1A51BD71CBE139200D38F3B /* Converter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Converter.hpp; sourceTree = "<group>"; };
+		A1A51BD81CBE139200D38F3B /* DartsDict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DartsDict.cpp; sourceTree = "<group>"; };
+		A1A51BD91CBE139200D38F3B /* DartsDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DartsDict.hpp; sourceTree = "<group>"; };
+		A1A51BDA1CBE139200D38F3B /* Dict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dict.cpp; sourceTree = "<group>"; };
+		A1A51BDB1CBE139200D38F3B /* Dict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dict.hpp; sourceTree = "<group>"; };
+		A1A51BDC1CBE139200D38F3B /* DictEntry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DictEntry.cpp; sourceTree = "<group>"; };
+		A1A51BDD1CBE139200D38F3B /* DictEntry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DictEntry.hpp; sourceTree = "<group>"; };
+		A1A51BDE1CBE139200D38F3B /* DictGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DictGroup.cpp; sourceTree = "<group>"; };
+		A1A51BDF1CBE139200D38F3B /* DictGroup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DictGroup.hpp; sourceTree = "<group>"; };
+		A1A51BE01CBE139200D38F3B /* Exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Exception.hpp; sourceTree = "<group>"; };
+		A1A51BE11CBE139200D38F3B /* Export.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Export.hpp; sourceTree = "<group>"; };
+		A1A51BE21CBE139200D38F3B /* Lexicon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lexicon.hpp; sourceTree = "<group>"; };
+		A1A51BE31CBE139200D38F3B /* MaxMatchSegmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxMatchSegmentation.cpp; sourceTree = "<group>"; };
+		A1A51BE41CBE139200D38F3B /* MaxMatchSegmentation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxMatchSegmentation.hpp; sourceTree = "<group>"; };
+		A1A51BE51CBE139200D38F3B /* opencc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opencc.h; sourceTree = "<group>"; };
+		A1A51BE61CBE139200D38F3B /* Optional.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Optional.hpp; sourceTree = "<group>"; };
+		A1A51BE71CBE139200D38F3B /* PhraseExtract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhraseExtract.cpp; sourceTree = "<group>"; };
+		A1A51BE81CBE139200D38F3B /* PhraseExtract.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PhraseExtract.hpp; sourceTree = "<group>"; };
+		A1A51BE91CBE139200D38F3B /* Segmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Segmentation.cpp; sourceTree = "<group>"; };
+		A1A51BEA1CBE139200D38F3B /* Segmentation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Segmentation.hpp; sourceTree = "<group>"; };
+		A1A51BEB1CBE139200D38F3B /* Segments.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Segments.hpp; sourceTree = "<group>"; };
+		A1A51BEC1CBE139200D38F3B /* SerializableDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SerializableDict.hpp; sourceTree = "<group>"; };
+		A1A51BED1CBE139200D38F3B /* SimpleConverter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleConverter.cpp; sourceTree = "<group>"; };
+		A1A51BEE1CBE139200D38F3B /* SimpleConverter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimpleConverter.hpp; sourceTree = "<group>"; };
+		A1A51BEF1CBE139200D38F3B /* TestUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestUtils.hpp; sourceTree = "<group>"; };
+		A1A51BF01CBE139200D38F3B /* TextDict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextDict.cpp; sourceTree = "<group>"; };
+		A1A51BF11CBE139200D38F3B /* TextDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextDict.hpp; sourceTree = "<group>"; };
+		A1A51BF21CBE139200D38F3B /* UTF8StringSlice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UTF8StringSlice.cpp; sourceTree = "<group>"; };
+		A1A51BF31CBE139200D38F3B /* UTF8StringSlice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UTF8StringSlice.hpp; sourceTree = "<group>"; };
+		A1A51BF41CBE139200D38F3B /* UTF8Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UTF8Util.cpp; sourceTree = "<group>"; };
+		A1A51BF51CBE139200D38F3B /* UTF8Util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UTF8Util.hpp; sourceTree = "<group>"; };
+		A1A51C071CBE13A600D38F3B /* HKVariants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HKVariants.txt; sourceTree = "<group>"; };
+		A1A51C081CBE13A600D38F3B /* HKVariantsPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HKVariantsPhrases.txt; sourceTree = "<group>"; };
+		A1A51C091CBE13A600D38F3B /* HKVariantsRevPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HKVariantsRevPhrases.txt; sourceTree = "<group>"; };
+		A1A51C0A1CBE13A600D38F3B /* JPVariants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JPVariants.txt; sourceTree = "<group>"; };
+		A1A51C0B1CBE13A600D38F3B /* STCharacters.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = STCharacters.txt; sourceTree = "<group>"; };
+		A1A51C0C1CBE13A600D38F3B /* STPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = STPhrases.txt; sourceTree = "<group>"; };
+		A1A51C0D1CBE13A600D38F3B /* TSCharacters.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSCharacters.txt; sourceTree = "<group>"; };
+		A1A51C0E1CBE13A600D38F3B /* TSPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSPhrases.txt; sourceTree = "<group>"; };
+		A1A51C0F1CBE13A600D38F3B /* TWPhrasesIT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWPhrasesIT.txt; sourceTree = "<group>"; };
+		A1A51C101CBE13A600D38F3B /* TWPhrasesName.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWPhrasesName.txt; sourceTree = "<group>"; };
+		A1A51C111CBE13A600D38F3B /* TWPhrasesOther.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWPhrasesOther.txt; sourceTree = "<group>"; };
+		A1A51C121CBE13A600D38F3B /* TWVariants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWVariants.txt; sourceTree = "<group>"; };
+		A1A51C131CBE13A600D38F3B /* TWVariantsRevPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWVariantsRevPhrases.txt; sourceTree = "<group>"; };
+		A1A51C221CBE13B600D38F3B /* hk2s.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hk2s.json; sourceTree = "<group>"; };
+		A1A51C231CBE13B600D38F3B /* s2hk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2hk.json; sourceTree = "<group>"; };
+		A1A51C241CBE13B600D38F3B /* s2t.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2t.json; sourceTree = "<group>"; };
+		A1A51C251CBE13B600D38F3B /* s2tw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2tw.json; sourceTree = "<group>"; };
+		A1A51C261CBE13B600D38F3B /* s2twp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2twp.json; sourceTree = "<group>"; };
+		A1A51C271CBE13B600D38F3B /* t2hk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2hk.json; sourceTree = "<group>"; };
+		A1A51C281CBE13B600D38F3B /* t2s.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2s.json; sourceTree = "<group>"; };
+		A1A51C291CBE13B600D38F3B /* t2tw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2tw.json; sourceTree = "<group>"; };
+		A1A51C2A1CBE13B600D38F3B /* tw2s.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tw2s.json; sourceTree = "<group>"; };
+		A1A51C2B1CBE13B600D38F3B /* tw2sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tw2sp.json; sourceTree = "<group>"; };
+		A1A51C361CBE189900D38F3B /* OpenCCService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCCService-Bridging-Header.h"; sourceTree = "<group>"; };
+		A1A51C3A1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCocoaDB.xcdatamodel; sourceTree = "<group>"; };
+		A1A51C481CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReadNewsData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1A51C491CBE32AF00D38F3B /* ReadNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadNewsData.swift; sourceTree = "<group>"; };
+		A1A51C4A1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionNewsData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1A51C4B1CBE32AF00D38F3B /* CollectionNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNewsData.swift; sourceTree = "<group>"; };
+		A1A51C501CBE430400D38F3B /* NewsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewController.swift; sourceTree = "<group>"; };
 		B0E9F5D40E1847865B79D460 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B2C3AAE6BC95AF616EFFA3B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,8 +227,10 @@
 				A1A51AF71CBB793300D38F3B /* SettingValue.swift */,
 				A1A51AF31CBB762300D38F3B /* 新聞 */,
 				A1A51AF41CBB762900D38F3B /* 收藏 */,
+				A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */,
 				A1A51ADC1CBB757A00D38F3B /* LaunchScreen.storyboard */,
 				A1A51ADF1CBB757A00D38F3B /* Info.plist */,
+				A1A51AFE1CBE101100D38F3B /* tool */,
 			);
 			path = MyCocoaChina;
 			sourceTree = "<group>";
@@ -123,7 +256,7 @@
 		A1A51AF41CBB762900D38F3B /* 收藏 */ = {
 			isa = PBXGroup;
 			children = (
-				A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */,
+				A1A51C501CBE430400D38F3B /* NewsCollectionViewController.swift */,
 			);
 			name = "收藏";
 			sourceTree = "<group>";
@@ -134,6 +267,161 @@
 				A1A51AF91CBB7ECA00D38F3B /* NewsCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		A1A51AFE1CBE101100D38F3B /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C381CBE2C6100D38F3B /* CoreData */,
+				A1A51C371CBE2BDB00D38F3B /* OpenCCiOS */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		A1A51BBD1CBE131000D38F3B /* darts-clone */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BBE1CBE133B00D38F3B /* darts.h */,
+			);
+			name = "darts-clone";
+			sourceTree = "<group>";
+		};
+		A1A51BBF1CBE135900D38F3B /* rapidjson-0.11 */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BC01CBE136000D38F3B /* document.h */,
+				A1A51BC11CBE136000D38F3B /* filestream.h */,
+				A1A51BC21CBE136600D38F3B /* internal */,
+				A1A51BC61CBE137500D38F3B /* prettywriter.h */,
+				A1A51BC71CBE137500D38F3B /* rapidjson.h */,
+				A1A51BC81CBE137500D38F3B /* reader.h */,
+				A1A51BC91CBE137500D38F3B /* stringbuffer.h */,
+				A1A51BCA1CBE137500D38F3B /* writer.h */,
+			);
+			name = "rapidjson-0.11";
+			sourceTree = "<group>";
+		};
+		A1A51BC21CBE136600D38F3B /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BC31CBE136D00D38F3B /* pow10.h */,
+				A1A51BC41CBE136D00D38F3B /* stack.h */,
+				A1A51BC51CBE136D00D38F3B /* strfunc.h */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		A1A51BCB1CBE138400D38F3B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BCC1CBE139200D38F3B /* BinaryDict.cpp */,
+				A1A51BCD1CBE139200D38F3B /* BinaryDict.hpp */,
+				A1A51BCE1CBE139200D38F3B /* CmdLineOutput.hpp */,
+				A1A51BCF1CBE139200D38F3B /* Common.hpp */,
+				A1A51BD01CBE139200D38F3B /* Config.cpp */,
+				A1A51BD11CBE139200D38F3B /* Config.hpp */,
+				A1A51BD21CBE139200D38F3B /* Conversion.cpp */,
+				A1A51BD31CBE139200D38F3B /* Conversion.hpp */,
+				A1A51BD41CBE139200D38F3B /* ConversionChain.cpp */,
+				A1A51BD51CBE139200D38F3B /* ConversionChain.hpp */,
+				A1A51BD61CBE139200D38F3B /* Converter.cpp */,
+				A1A51BD71CBE139200D38F3B /* Converter.hpp */,
+				A1A51BD81CBE139200D38F3B /* DartsDict.cpp */,
+				A1A51BD91CBE139200D38F3B /* DartsDict.hpp */,
+				A1A51BDA1CBE139200D38F3B /* Dict.cpp */,
+				A1A51BDB1CBE139200D38F3B /* Dict.hpp */,
+				A1A51BDC1CBE139200D38F3B /* DictEntry.cpp */,
+				A1A51BDD1CBE139200D38F3B /* DictEntry.hpp */,
+				A1A51BDE1CBE139200D38F3B /* DictGroup.cpp */,
+				A1A51BDF1CBE139200D38F3B /* DictGroup.hpp */,
+				A1A51BE01CBE139200D38F3B /* Exception.hpp */,
+				A1A51BE11CBE139200D38F3B /* Export.hpp */,
+				A1A51BE21CBE139200D38F3B /* Lexicon.hpp */,
+				A1A51BE31CBE139200D38F3B /* MaxMatchSegmentation.cpp */,
+				A1A51BE41CBE139200D38F3B /* MaxMatchSegmentation.hpp */,
+				A1A51BE51CBE139200D38F3B /* opencc.h */,
+				A1A51BE61CBE139200D38F3B /* Optional.hpp */,
+				A1A51BE71CBE139200D38F3B /* PhraseExtract.cpp */,
+				A1A51BE81CBE139200D38F3B /* PhraseExtract.hpp */,
+				A1A51BE91CBE139200D38F3B /* Segmentation.cpp */,
+				A1A51BEA1CBE139200D38F3B /* Segmentation.hpp */,
+				A1A51BEB1CBE139200D38F3B /* Segments.hpp */,
+				A1A51BEC1CBE139200D38F3B /* SerializableDict.hpp */,
+				A1A51BED1CBE139200D38F3B /* SimpleConverter.cpp */,
+				A1A51BEE1CBE139200D38F3B /* SimpleConverter.hpp */,
+				A1A51BEF1CBE139200D38F3B /* TestUtils.hpp */,
+				A1A51BF01CBE139200D38F3B /* TextDict.cpp */,
+				A1A51BF11CBE139200D38F3B /* TextDict.hpp */,
+				A1A51BF21CBE139200D38F3B /* UTF8StringSlice.cpp */,
+				A1A51BF31CBE139200D38F3B /* UTF8StringSlice.hpp */,
+				A1A51BF41CBE139200D38F3B /* UTF8Util.cpp */,
+				A1A51BF51CBE139200D38F3B /* UTF8Util.hpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A1A51C061CBE139B00D38F3B /* dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C071CBE13A600D38F3B /* HKVariants.txt */,
+				A1A51C081CBE13A600D38F3B /* HKVariantsPhrases.txt */,
+				A1A51C091CBE13A600D38F3B /* HKVariantsRevPhrases.txt */,
+				A1A51C0A1CBE13A600D38F3B /* JPVariants.txt */,
+				A1A51C0B1CBE13A600D38F3B /* STCharacters.txt */,
+				A1A51C0C1CBE13A600D38F3B /* STPhrases.txt */,
+				A1A51C0D1CBE13A600D38F3B /* TSCharacters.txt */,
+				A1A51C0E1CBE13A600D38F3B /* TSPhrases.txt */,
+				A1A51C0F1CBE13A600D38F3B /* TWPhrasesIT.txt */,
+				A1A51C101CBE13A600D38F3B /* TWPhrasesName.txt */,
+				A1A51C111CBE13A600D38F3B /* TWPhrasesOther.txt */,
+				A1A51C121CBE13A600D38F3B /* TWVariants.txt */,
+				A1A51C131CBE13A600D38F3B /* TWVariantsRevPhrases.txt */,
+			);
+			name = dictionary;
+			sourceTree = "<group>";
+		};
+		A1A51C211CBE13AD00D38F3B /* config */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C221CBE13B600D38F3B /* hk2s.json */,
+				A1A51C231CBE13B600D38F3B /* s2hk.json */,
+				A1A51C241CBE13B600D38F3B /* s2t.json */,
+				A1A51C251CBE13B600D38F3B /* s2tw.json */,
+				A1A51C261CBE13B600D38F3B /* s2twp.json */,
+				A1A51C271CBE13B600D38F3B /* t2hk.json */,
+				A1A51C281CBE13B600D38F3B /* t2s.json */,
+				A1A51C291CBE13B600D38F3B /* t2tw.json */,
+				A1A51C2A1CBE13B600D38F3B /* tw2s.json */,
+				A1A51C2B1CBE13B600D38F3B /* tw2sp.json */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		A1A51C371CBE2BDB00D38F3B /* OpenCCiOS */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C361CBE189900D38F3B /* OpenCCService-Bridging-Header.h */,
+				A1A51B9F1CBE10E200D38F3B /* OpenCCService.h */,
+				A1A51BA01CBE10E200D38F3B /* OpenCCService.mm */,
+				A1A51C211CBE13AD00D38F3B /* config */,
+				A1A51C061CBE139B00D38F3B /* dictionary */,
+				A1A51BCB1CBE138400D38F3B /* src */,
+				A1A51BBF1CBE135900D38F3B /* rapidjson-0.11 */,
+				A1A51BBD1CBE131000D38F3B /* darts-clone */,
+			);
+			name = OpenCCiOS;
+			sourceTree = "<group>";
+		};
+		A1A51C381CBE2C6100D38F3B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C391CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld */,
+				A1A51C481CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift */,
+				A1A51C491CBE32AF00D38F3B /* ReadNewsData.swift */,
+				A1A51C4A1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift */,
+				A1A51C4B1CBE32AF00D38F3B /* CollectionNewsData.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		BB3EBC7EA04E6449AA360459 /* Frameworks */ = {
@@ -237,9 +525,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A51C321CBE13B600D38F3B /* t2s.json in Resources */,
+				A1A51C1D1CBE13A600D38F3B /* TWPhrasesName.txt in Resources */,
+				A1A51C171CBE13A600D38F3B /* JPVariants.txt in Resources */,
+				A1A51C191CBE13A600D38F3B /* STPhrases.txt in Resources */,
+				A1A51C351CBE13B600D38F3B /* tw2sp.json in Resources */,
 				A1A51ADE1CBB757A00D38F3B /* LaunchScreen.storyboard in Resources */,
 				A1A51ADB1CBB757A00D38F3B /* Assets.xcassets in Resources */,
+				A1A51C2C1CBE13B600D38F3B /* hk2s.json in Resources */,
+				A1A51C1E1CBE13A600D38F3B /* TWPhrasesOther.txt in Resources */,
+				A1A51C161CBE13A600D38F3B /* HKVariantsRevPhrases.txt in Resources */,
+				A1A51C311CBE13B600D38F3B /* t2hk.json in Resources */,
+				A1A51C331CBE13B600D38F3B /* t2tw.json in Resources */,
+				A1A51C2E1CBE13B600D38F3B /* s2t.json in Resources */,
+				A1A51C1A1CBE13A600D38F3B /* TSCharacters.txt in Resources */,
+				A1A51C1F1CBE13A600D38F3B /* TWVariants.txt in Resources */,
+				A1A51C301CBE13B600D38F3B /* s2twp.json in Resources */,
 				A1A51AD91CBB757A00D38F3B /* Main.storyboard in Resources */,
+				A1A51C1C1CBE13A600D38F3B /* TWPhrasesIT.txt in Resources */,
+				A1A51C1B1CBE13A600D38F3B /* TSPhrases.txt in Resources */,
+				A1A51C201CBE13A600D38F3B /* TWVariantsRevPhrases.txt in Resources */,
+				A1A51C181CBE13A600D38F3B /* STCharacters.txt in Resources */,
+				A1A51C2D1CBE13B600D38F3B /* s2hk.json in Resources */,
+				A1A51C2F1CBE13B600D38F3B /* s2tw.json in Resources */,
+				A1A51C341CBE13B600D38F3B /* tw2s.json in Resources */,
+				A1A51C151CBE13A600D38F3B /* HKVariantsPhrases.txt in Resources */,
+				A1A51C141CBE13A600D38F3B /* HKVariants.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +616,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A51C021CBE139200D38F3B /* SimpleConverter.cpp in Sources */,
 				A1A51AD41CBB757A00D38F3B /* AppDelegate.swift in Sources */,
+				A1A51C4F1CBE32AF00D38F3B /* CollectionNewsData.swift in Sources */,
+				A1A51BF71CBE139200D38F3B /* Config.cpp in Sources */,
 				A1A51AFD1CBD06FC00D38F3B /* MyWebViewController.swift in Sources */,
+				A1A51BA11CBE10E200D38F3B /* OpenCCService.mm in Sources */,
+				A1A51BFB1CBE139200D38F3B /* DartsDict.cpp in Sources */,
+				A1A51BFE1CBE139200D38F3B /* DictGroup.cpp in Sources */,
+				A1A51C4D1CBE32AF00D38F3B /* ReadNewsData.swift in Sources */,
 				A1A51AF81CBB793300D38F3B /* SettingValue.swift in Sources */,
+				A1A51C3B1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld in Sources */,
+				A1A51C4E1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift in Sources */,
 				A1A51AFA1CBB7ECA00D38F3B /* NewsCell.swift in Sources */,
+				A1A51BF61CBE139200D38F3B /* BinaryDict.cpp in Sources */,
+				A1A51C041CBE139200D38F3B /* UTF8StringSlice.cpp in Sources */,
+				A1A51C031CBE139200D38F3B /* TextDict.cpp in Sources */,
+				A1A51BFA1CBE139200D38F3B /* Converter.cpp in Sources */,
+				A1A51C4C1CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift in Sources */,
+				A1A51BFF1CBE139200D38F3B /* MaxMatchSegmentation.cpp in Sources */,
+				A1A51BFC1CBE139200D38F3B /* Dict.cpp in Sources */,
+				A1A51BFD1CBE139200D38F3B /* DictEntry.cpp in Sources */,
+				A1A51C011CBE139200D38F3B /* Segmentation.cpp in Sources */,
+				A1A51BF91CBE139200D38F3B /* ConversionChain.cpp in Sources */,
+				A1A51BF81CBE139200D38F3B /* Conversion.cpp in Sources */,
 				A1A51AF61CBB765A00D38F3B /* NewsViewController.swift in Sources */,
+				A1A51C511CBE430400D38F3B /* NewsCollectionViewController.swift in Sources */,
+				A1A51C051CBE139200D38F3B /* UTF8Util.cpp in Sources */,
+				A1A51C001CBE139200D38F3B /* PhraseExtract.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +778,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddmc.MyCocoaChina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyCocoaChina/OpenCCService-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -457,6 +792,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddmc.MyCocoaChina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyCocoaChina/OpenCCService-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -513,6 +849,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1A51C391CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1A51C3A1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodel */,
+			);
+			currentVersion = A1A51C3A1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodel */;
+			path = MyCocoaDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1A51AC81CBB757A00D38F3B /* Project object */;
 }

@@ -7,6 +7,10 @@
 //
 
 import Foundation
+import MagicalRecord
+
+let kRecipesStoreName = "MyCocoaDB" as NSString
+
 
 func rootApiUrl() -> String {
 //    return "http://www.cocoachina.com/news"
@@ -22,4 +26,9 @@ func morePageApiUrl(page:UInt) -> String {
     
     return "http://www.cocoachina.com/cms/wap.php?action=more&page=\(page)"
 
+}
+
+func managedObjectContext() -> NSManagedObjectContext {
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    return appDelegate.managedObjectContext!    
 }
