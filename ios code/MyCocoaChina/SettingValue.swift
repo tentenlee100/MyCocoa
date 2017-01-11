@@ -21,7 +21,7 @@ func rootApiUrl() -> String {
     
 }
 
-func morePageApiUrl(page:UInt) -> String {
+func morePageApiUrl(_ page:UInt) -> String {
 //    return "http://www.cocoachina.com/news/index.php?num=\(page)"
     
     return "http://www.cocoachina.com/cms/wap.php?action=more&page=\(page)"
@@ -29,6 +29,6 @@ func morePageApiUrl(page:UInt) -> String {
 }
 
 func managedObjectContext() -> NSManagedObjectContext {
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     return appDelegate.managedObjectContext!    
 }

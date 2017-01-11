@@ -12,7 +12,7 @@ import Alamofire
 
 class MyWebViewController: UIViewController ,UIWebViewDelegate{
     
-    var url : NSURL = NSURL() {
+    var url : URL = URL() {
         didSet{
             loadUrlHtml()
         }
@@ -26,21 +26,21 @@ class MyWebViewController: UIViewController ,UIWebViewDelegate{
         webview?.scrollView.contentInset = UIEdgeInsets.init(top: -85, left: 0, bottom: 0, right: 0)
         webview?.scrollView.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         
-        let addCollectionBarItem  = UIBarButtonItem(image: UIImage(named: "favorite"), landscapeImagePhone: UIImage(named: "favorite"), style: .Plain, target: self, action: #selector(addCollectionAction(_:)))
+        let addCollectionBarItem  = UIBarButtonItem(image: UIImage(named: "favorite"), landscapeImagePhone: UIImage(named: "favorite"), style: .plain, target: self, action: #selector(addCollectionAction(_:)))
         
         navigationItem.rightBarButtonItem = addCollectionBarItem
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         userActivity!.invalidate()
 //        webview?.loadHTMLString(String() , baseURL: url)
@@ -48,13 +48,13 @@ class MyWebViewController: UIViewController ,UIWebViewDelegate{
     }
 
     class func loadFromStoryboard() -> MyWebViewController? {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MyWebViewController") as? MyWebViewController
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyWebViewController") as? MyWebViewController
     }
     
     func loadUrlHtml() {
         webview?.loadHTMLString(String() , baseURL: url)
         
-        MBProgressHUD.showHUDAddedTo(view, animated: true)
+        MBProgressHUD.showAdded(to: view, animated: true)
         
         Alamofire.request(.GET, url.absoluteString! , parameters: nil)
             .responseData { [weak self] response in
@@ -117,17 +117,17 @@ class MyWebViewController: UIViewController ,UIWebViewDelegate{
     }
     
     
-    func addCollectionAction(sender: AnyObject?)  {
+    func addCollectionAction(_ sender: AnyObject?)  {
         
         
-        let data = ReadNewsData.MR_findFirstByAttribute("newsId", withValue: dataDic["newsId"]!)
+        let data = ReadNewsData.mr_findFirst(byAttribute: "newsId", withValue: dataDic["newsId"]!)
         
         if  (data != nil && dataDic["newsId"] == nil ){
             print("已收藏")
             return;
         }else{
             
-            let collectionData = CollectionNewsData.MR_createEntity()
+            let collectionData = CollectionNewsData.mr_createEntity()
             collectionData?.newsId = dataDic["newsId"]!
             collectionData?.title = dataDic["title"]!
             collectionData?.con = dataDic["con"]!
@@ -135,29 +135,29 @@ class MyWebViewController: UIViewController ,UIWebViewDelegate{
             collectionData?.photoImageUrl = dataDic["imageUrl"]!
             collectionData?.url = dataDic["url"]!
             
-            managedObjectContext().MR_saveToPersistentStoreAndWait()
+            managedObjectContext().mr_saveToPersistentStoreAndWait()
             
             
             
         }
         
         
-        let alertController = UIAlertController(title: "收藏成功", message: nil, preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "取消", style: .Cancel , handler: nil)
+        let alertController = UIAlertController(title: "收藏成功", message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel , handler: nil)
         alertController.addAction(cancelAction)
         
-        presentViewController(alertController, animated: true) { 
+        present(alertController, animated: true) { 
             
         }
         
         
     }
     //MARK - UIWebViewDelegate
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if request.URL != url {
-            if ((request.URL?.absoluteString!.containsString("googleads.g")) != true) {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if request.url != url {
+            if ((request.url?.absoluteString.contains("googleads.g")) != true) {
 
-                UIApplication.sharedApplication().openURL(request.URL!)
+                UIApplication.shared.openURL(request.url!)
             }
             
             return false
@@ -166,8 +166,8 @@ class MyWebViewController: UIViewController ,UIWebViewDelegate{
         }
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        MBProgressHUD.hideHUDForView(view, animated: true)
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        MBProgressHUD.hide(for: view, animated: true)
 
     }
 }

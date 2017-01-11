@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "957B8731FA42438AC055A4F2F47EFEF2"
+               BlueprintIdentifier = "4952338DD0C2D0FBDAE7D8EAD1F6B24C"
                BuildableName = "UIImage_Additions.framework"
                BlueprintName = "UIImage+Additions"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "957B8731FA42438AC055A4F2F47EFEF2"
+            BlueprintIdentifier = "4952338DD0C2D0FBDAE7D8EAD1F6B24C"
             BuildableName = "UIImage_Additions.framework"
             BlueprintName = "UIImage+Additions"
             ReferencedContainer = "container:Pods.xcodeproj">

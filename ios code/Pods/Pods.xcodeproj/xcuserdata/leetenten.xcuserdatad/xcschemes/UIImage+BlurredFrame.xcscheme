@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5F38111B94A00B13F55FA5793F48483"
+               BlueprintIdentifier = "0DA0523928173C0DED09C96C2AF37CAE"
                BuildableName = "UIImage_BlurredFrame.framework"
                BlueprintName = "UIImage+BlurredFrame"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5F38111B94A00B13F55FA5793F48483"
+            BlueprintIdentifier = "0DA0523928173C0DED09C96C2AF37CAE"
             BuildableName = "UIImage_BlurredFrame.framework"
             BlueprintName = "UIImage+BlurredFrame"
             ReferencedContainer = "container:Pods.xcodeproj">

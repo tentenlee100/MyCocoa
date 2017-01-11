@@ -15,7 +15,8 @@
 - (UIImage *)imageForPhoto:(id<IDMPhoto>)photo;
 - (void)cancelControlHiding;
 - (void)hideControlsAfterDelay;
-- (void)toggleControls;
+//- (void)toggleControls;
+- (void)handleSingleTap;
 @end
 
 // Private methods and properties
@@ -192,11 +193,24 @@
 			maxScale = minScale * 2;
 		}
 	}
+
+	// Calculate Max Scale Of Double Tap
+	CGFloat maxDoubleTapZoomScale = 4.0 * minScale; // Allow double scale
+    // on high resolution screens we have double the pixel density, so we will be seeing every pixel if we limit the
+    // maximum zoom scale to 0.5.
+	if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
+		maxDoubleTapZoomScale = maxDoubleTapZoomScale / [[UIScreen mainScreen] scale];
+
+	if (maxDoubleTapZoomScale < minScale) {
+		maxDoubleTapZoomScale = minScale * 2;
+        }
+    }
     
 	// Set
 	self.maximumZoomScale = maxScale;
 	self.minimumZoomScale = minScale;
 	self.zoomScale = minScale;
+	self.maximumDoubleTapZoomScale = maxDoubleTapZoomScale;
     
 	// Reset position
 	_photoImageView.frame = CGRectMake(0, 0, _photoImageView.frame.size.width, _photoImageView.frame.size.height);
@@ -261,7 +275,8 @@
 #pragma mark - Tap Detection
 
 - (void)handleSingleTap:(CGPoint)touchPoint {
-	[_photoBrowser performSelector:@selector(toggleControls) withObject:nil afterDelay:0.2];
+//	[_photoBrowser performSelector:@selector(toggleControls) withObject:nil afterDelay:0.2];
+	[_photoBrowser performSelector:@selector(handleSingleTap) withObject:nil afterDelay:0.2];
 }
 
 - (void)handleDoubleTap:(CGPoint)touchPoint {
@@ -270,7 +285,7 @@
 	[NSObject cancelPreviousPerformRequestsWithTarget:_photoBrowser];
 	
 	// Zoom
-	if (self.zoomScale == self.maximumZoomScale) {
+	if (self.zoomScale == self.maximumDoubleTapZoomScale) {
 		
 		// Zoom out
 		[self setZoomScale:self.minimumZoomScale animated:YES];
@@ -278,7 +293,10 @@
 	} else {
 		
 		// Zoom in
-		[self zoomToRect:CGRectMake(touchPoint.x, touchPoint.y, 1, 1) animated:YES];
+		CGSize targetSize = CGSizeMake(self.frame.size.width / self.maximumDoubleTapZoomScale, self.frame.size.height / self.maximumDoubleTapZoomScale);
+		CGPoint targetPoint = CGPointMake(touchPoint.x - targetSize.width / 2, touchPoint.y - targetSize.height / 2);
+		
+		[self zoomToRect:CGRectMake(targetPoint.x, targetPoint.y, targetSize.width, targetSize.height) animated:YES];
 		
 	}
 	

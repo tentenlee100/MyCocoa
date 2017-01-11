@@ -34,7 +34,7 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print(morePageApiUrl(1))
         
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
 //        callRootApi();
@@ -58,18 +58,18 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         
         
-        header.lastUpdatedTimeLabel.hidden = true;
-        header.setTitle("下滑更新資料", forState: MJRefreshState.Idle)
-        header.setTitle("放開開始更新", forState: MJRefreshState.Pulling)
-        header.setTitle("更新資料中", forState: MJRefreshState.Refreshing)
+        header?.lastUpdatedTimeLabel.isHidden = true;
+        header?.setTitle("下滑更新資料", for: MJRefreshState.idle)
+        header?.setTitle("放開開始更新", for: MJRefreshState.pulling)
+        header?.setTitle("更新資料中", for: MJRefreshState.refreshing)
         
         
         let footer = MJRefreshAutoNormalFooter.init { [unowned self] in
             self.callMoreApi()
         }
-        footer.setTitle("正在更新中", forState: .Refreshing)
-        footer.setTitle("已無資料", forState: .NoMoreData)
-        footer.setTitle("上滑繼續載入", forState: .Idle)
+        footer?.setTitle("正在更新中", for: .refreshing)
+        footer?.setTitle("已無資料", for: .noMoreData)
+        footer?.setTitle("上滑繼續載入", for: .idle)
 
         tableView?.mj_header = header
         tableView?.mj_footer = footer
@@ -209,41 +209,41 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
 // MARK: - UITableViewDelegate
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated:true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated:true)
         
-        let data = ReadNewsData.MR_findFirstByAttribute("newsId", withValue: self.tableViewArray[indexPath.row]["newsId"]!)
+        let data = ReadNewsData.mr_findFirst(byAttribute: "newsId", withValue: self.tableViewArray[indexPath.row]["newsId"]!)
         
         if  (data == nil && self.tableViewArray[indexPath.row]["newsId"] != nil ){
-            let newsId = ReadNewsData.MR_createEntity()
+            let newsId = ReadNewsData.mr_createEntity()
             newsId?.newsId = self.tableViewArray[indexPath.row]["newsId"]!
-            managedObjectContext().MR_saveToPersistentStoreAndWait()
+            managedObjectContext().mr_saveToPersistentStoreAndWait()
         }
         
         if ((self.tableView?.mj_footer) != nil){
-            let  cell = tableView.cellForRowAtIndexPath(indexPath) as! NewsCell
+            let  cell = tableView.cellForRow(at: indexPath) as! NewsCell
             cell.updateLabelColor(true)
         }
 
         
         self.myWebviewController.title = self.tableViewArray[indexPath.row]["title"]!
-        self.myWebviewController.url = NSURL(string: "http://www.cocoachina.com/cms/\(self.tableViewArray[indexPath.row]["url"]!)")!
+        self.myWebviewController.url = URL(string: "http://www.cocoachina.com/cms/\(self.tableViewArray[indexPath.row]["url"]!)")!
         self.myWebviewController.dataDic = self.tableViewArray[indexPath.row]
         self.navigationController?.pushViewController(self.myWebviewController, animated: true)
 
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
         return self.tableViewArray.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsCell
         cell.titleLabel!.text = self.tableViewArray[indexPath.row]["title"]
         
         if let imageUrl = self.tableViewArray[indexPath.row]["imageUrl"] {
-            cell.photoImageView!.sd_setImageWithURL(NSURL(string: imageUrl),completed:{ (image: UIImage!, error: NSError!, cacheType: SDImageCacheType!, imageURL: NSURL!) -> Void in
+            cell.photoImageView!.sd_setImage(with: URL(string: imageUrl),completed:{ (image: UIImage!, error: NSError!, cacheType: SDImageCacheType!, imageURL: URL!) -> Void in
             })
         }else{
             cell.photoImageView!.image = nil
@@ -251,7 +251,7 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.conLabel?.text = self.tableViewArray[indexPath.row]["con"]
         cell.dateLabel?.text = self.tableViewArray[indexPath.row]["date"]
 
-        let data = ReadNewsData.MR_findFirstByAttribute("newsId", withValue: self.tableViewArray[indexPath.row]["newsId"]!)
+        let data = ReadNewsData.mr_findFirst(byAttribute: "newsId", withValue: self.tableViewArray[indexPath.row]["newsId"]!)
 
         if  (data != nil && self.tableViewArray[indexPath.row]["newsId"] != nil ){
             cell.updateLabelColor(true)

@@ -16,18 +16,18 @@ class NewsCollectionViewController: NewsViewController {
         tableView?.tableFooterView = UIView()
         title = "收藏"
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
             // 耗时的操作
             self.getDbData()
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 // 更新界面
                 self.tableView?.reloadData()
             });
         });
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if self.tableViewArray.count != CollectionNewsData.MR_findAll()?.count {
+        if self.tableViewArray.count != CollectionNewsData.mr_findAll()?.count {
             self.getDbData()
         }
     }
@@ -38,10 +38,10 @@ class NewsCollectionViewController: NewsViewController {
             self.tableView?.reloadData()
         }
         
-        header.lastUpdatedTimeLabel.hidden = true;
-        header.setTitle("下滑更新資料", forState: MJRefreshState.Idle)
-        header.setTitle("放開開始更新", forState: MJRefreshState.Pulling)
-        header.setTitle("更新資料中", forState: MJRefreshState.Refreshing)
+        header?.lastUpdatedTimeLabel.isHidden = true;
+        header?.setTitle("下滑更新資料", for: MJRefreshState.idle)
+        header?.setTitle("放開開始更新", for: MJRefreshState.pulling)
+        header?.setTitle("更新資料中", for: MJRefreshState.refreshing)
     
         self.tableView?.mj_header = header
 //        self.tableView?.mj_header.beginRefreshing()
@@ -51,7 +51,7 @@ class NewsCollectionViewController: NewsViewController {
         var collectArray :[Dictionary<String,String>] = []
         
         
-        for obj  in CollectionNewsData.MR_findAll()!.reverse() {
+        for obj  in CollectionNewsData.mr_findAll()!.reversed() {
             let newobj  = obj as! CollectionNewsData
             var dic : Dictionary<String,String> = [:]
             dic["newsId"] = newobj.newsId
@@ -69,32 +69,32 @@ class NewsCollectionViewController: NewsViewController {
         self.tableView?.mj_header.endRefreshing()
 
     }
-    func deleteCollectionData(index:NSIndexPath) -> Void {
+    func deleteCollectionData(_ index:IndexPath) -> Void {
         
-        for obj in CollectionNewsData.MR_findByAttribute("newsId", withValue: self.tableViewArray[index.row]["newsId"]!)!{
+        for obj in CollectionNewsData.mr_find(byAttribute: "newsId", withValue: self.tableViewArray[index.row]["newsId"]!)!{
             let newobj  = obj as! CollectionNewsData
-            newobj.MR_deleteEntityInContext(managedObjectContext())
+            newobj.mr_deleteEntity(in: managedObjectContext())
         }
-        managedObjectContext().MR_saveToPersistentStoreAndWait()
+        managedObjectContext().mr_saveToPersistentStoreAndWait()
         
         self.getDbData()
         self.tableView?.reloadData()
         
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath) as! NewsCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! NewsCell
         cell.updateLabelColor(false)
         
         return cell
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAtIndexPath indexPath: IndexPath) -> Bool {
         return true
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
+        if editingStyle == .delete {
             self.deleteCollectionData(indexPath)
         }
     }

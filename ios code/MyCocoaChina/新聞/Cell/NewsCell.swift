@@ -14,8 +14,8 @@ class NewsCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel?
     @IBOutlet var photoImageView: UIImageView?
     
-    func updateLabelColor(on:Bool) -> Void {
-        let color = on ? UIColor.lightGrayColor() : UIColor.blackColor()
+    func updateLabelColor(_ on:Bool) -> Void {
+        let color = on ? UIColor.lightGray : UIColor.black
         
         self.titleLabel?.textColor = color
         self.conLabel?.textColor = color

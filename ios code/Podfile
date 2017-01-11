@@ -17,9 +17,9 @@ def default_pods
     pod 'UIImage+BlurredFrame'
     pod 'UIAlertController+Blocks'
     pod 'IQKeyboardManager'
-    pod 'SWXMLHash', '~> 2.3.0'
-    pod 'Kanna' , '1.1.0'
-    pod 'JSQWebViewController' , '4.0.0'
+    #pod 'SWXMLHash'
+    pod 'Kanna'
+    pod 'JSQWebViewController'
 end
 
 target 'MyCocoaChina' do
