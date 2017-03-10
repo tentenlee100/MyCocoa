@@ -1,0 +1,963 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A2CDD57D48BB7F00272060E /* Pods_MyCocoaChina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D457ED9E34DC5662E0EDDE /* Pods_MyCocoaChina.framework */; };
+		A111E9811E275DB100D0140E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111E97C1E275DB100D0140E /* Alamofire.framework */; };
+		A111E9821E275DB100D0140E /* JSQWebViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111E97D1E275DB100D0140E /* JSQWebViewController.framework */; };
+		A111E9831E275DB100D0140E /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111E97E1E275DB100D0140E /* MagicalRecord.framework */; };
+		A111E9841E275DB100D0140E /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111E97F1E275DB100D0140E /* MBProgressHUD.framework */; };
+		A111E9851E275DB100D0140E /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111E9801E275DB100D0140E /* WebImage.framework */; };
+		A1A51AD41CBB757A00D38F3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AD31CBB757A00D38F3B /* AppDelegate.swift */; };
+		A1A51AD91CBB757A00D38F3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A51AD71CBB757A00D38F3B /* Main.storyboard */; };
+		A1A51ADB1CBB757A00D38F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A51ADA1CBB757A00D38F3B /* Assets.xcassets */; };
+		A1A51ADE1CBB757A00D38F3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A51ADC1CBB757A00D38F3B /* LaunchScreen.storyboard */; };
+		A1A51AE91CBB757A00D38F3B /* MyCocoaChinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AE81CBB757A00D38F3B /* MyCocoaChinaUITests.swift */; };
+		A1A51AF61CBB765A00D38F3B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AF51CBB765A00D38F3B /* NewsViewController.swift */; };
+		A1A51AF81CBB793300D38F3B /* SettingValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AF71CBB793300D38F3B /* SettingValue.swift */; };
+		A1A51AFA1CBB7ECA00D38F3B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AF91CBB7ECA00D38F3B /* NewsCell.swift */; };
+		A1A51AFD1CBD06FC00D38F3B /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */; };
+		A1A51BA11CBE10E200D38F3B /* OpenCCService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BA01CBE10E200D38F3B /* OpenCCService.mm */; };
+		A1A51BF61CBE139200D38F3B /* BinaryDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BCC1CBE139200D38F3B /* BinaryDict.cpp */; };
+		A1A51BF71CBE139200D38F3B /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD01CBE139200D38F3B /* Config.cpp */; };
+		A1A51BF81CBE139200D38F3B /* Conversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD21CBE139200D38F3B /* Conversion.cpp */; };
+		A1A51BF91CBE139200D38F3B /* ConversionChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD41CBE139200D38F3B /* ConversionChain.cpp */; };
+		A1A51BFA1CBE139200D38F3B /* Converter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD61CBE139200D38F3B /* Converter.cpp */; };
+		A1A51BFB1CBE139200D38F3B /* DartsDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BD81CBE139200D38F3B /* DartsDict.cpp */; };
+		A1A51BFC1CBE139200D38F3B /* Dict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BDA1CBE139200D38F3B /* Dict.cpp */; };
+		A1A51BFD1CBE139200D38F3B /* DictEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BDC1CBE139200D38F3B /* DictEntry.cpp */; };
+		A1A51BFE1CBE139200D38F3B /* DictGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BDE1CBE139200D38F3B /* DictGroup.cpp */; };
+		A1A51BFF1CBE139200D38F3B /* MaxMatchSegmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BE31CBE139200D38F3B /* MaxMatchSegmentation.cpp */; };
+		A1A51C001CBE139200D38F3B /* PhraseExtract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BE71CBE139200D38F3B /* PhraseExtract.cpp */; };
+		A1A51C011CBE139200D38F3B /* Segmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BE91CBE139200D38F3B /* Segmentation.cpp */; };
+		A1A51C021CBE139200D38F3B /* SimpleConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BED1CBE139200D38F3B /* SimpleConverter.cpp */; };
+		A1A51C031CBE139200D38F3B /* TextDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BF01CBE139200D38F3B /* TextDict.cpp */; };
+		A1A51C041CBE139200D38F3B /* UTF8StringSlice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BF21CBE139200D38F3B /* UTF8StringSlice.cpp */; };
+		A1A51C051CBE139200D38F3B /* UTF8Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A51BF41CBE139200D38F3B /* UTF8Util.cpp */; };
+		A1A51C141CBE13A600D38F3B /* HKVariants.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C071CBE13A600D38F3B /* HKVariants.txt */; };
+		A1A51C151CBE13A600D38F3B /* HKVariantsPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C081CBE13A600D38F3B /* HKVariantsPhrases.txt */; };
+		A1A51C161CBE13A600D38F3B /* HKVariantsRevPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C091CBE13A600D38F3B /* HKVariantsRevPhrases.txt */; };
+		A1A51C171CBE13A600D38F3B /* JPVariants.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0A1CBE13A600D38F3B /* JPVariants.txt */; };
+		A1A51C181CBE13A600D38F3B /* STCharacters.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0B1CBE13A600D38F3B /* STCharacters.txt */; };
+		A1A51C191CBE13A600D38F3B /* STPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0C1CBE13A600D38F3B /* STPhrases.txt */; };
+		A1A51C1A1CBE13A600D38F3B /* TSCharacters.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0D1CBE13A600D38F3B /* TSCharacters.txt */; };
+		A1A51C1B1CBE13A600D38F3B /* TSPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0E1CBE13A600D38F3B /* TSPhrases.txt */; };
+		A1A51C1C1CBE13A600D38F3B /* TWPhrasesIT.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C0F1CBE13A600D38F3B /* TWPhrasesIT.txt */; };
+		A1A51C1D1CBE13A600D38F3B /* TWPhrasesName.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C101CBE13A600D38F3B /* TWPhrasesName.txt */; };
+		A1A51C1E1CBE13A600D38F3B /* TWPhrasesOther.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C111CBE13A600D38F3B /* TWPhrasesOther.txt */; };
+		A1A51C1F1CBE13A600D38F3B /* TWVariants.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C121CBE13A600D38F3B /* TWVariants.txt */; };
+		A1A51C201CBE13A600D38F3B /* TWVariantsRevPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C131CBE13A600D38F3B /* TWVariantsRevPhrases.txt */; };
+		A1A51C2C1CBE13B600D38F3B /* hk2s.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C221CBE13B600D38F3B /* hk2s.json */; };
+		A1A51C2D1CBE13B600D38F3B /* s2hk.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C231CBE13B600D38F3B /* s2hk.json */; };
+		A1A51C2E1CBE13B600D38F3B /* s2t.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C241CBE13B600D38F3B /* s2t.json */; };
+		A1A51C2F1CBE13B600D38F3B /* s2tw.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C251CBE13B600D38F3B /* s2tw.json */; };
+		A1A51C301CBE13B600D38F3B /* s2twp.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C261CBE13B600D38F3B /* s2twp.json */; };
+		A1A51C311CBE13B600D38F3B /* t2hk.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C271CBE13B600D38F3B /* t2hk.json */; };
+		A1A51C321CBE13B600D38F3B /* t2s.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C281CBE13B600D38F3B /* t2s.json */; };
+		A1A51C331CBE13B600D38F3B /* t2tw.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C291CBE13B600D38F3B /* t2tw.json */; };
+		A1A51C341CBE13B600D38F3B /* tw2s.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C2A1CBE13B600D38F3B /* tw2s.json */; };
+		A1A51C351CBE13B600D38F3B /* tw2sp.json in Resources */ = {isa = PBXBuildFile; fileRef = A1A51C2B1CBE13B600D38F3B /* tw2sp.json */; };
+		A1A51C3B1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C391CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld */; };
+		A1A51C4C1CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C481CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift */; };
+		A1A51C4D1CBE32AF00D38F3B /* ReadNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C491CBE32AF00D38F3B /* ReadNewsData.swift */; };
+		A1A51C4E1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C4A1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift */; };
+		A1A51C4F1CBE32AF00D38F3B /* CollectionNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C4B1CBE32AF00D38F3B /* CollectionNewsData.swift */; };
+		A1A51C511CBE430400D38F3B /* NewsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A51C501CBE430400D38F3B /* NewsCollectionViewController.swift */; };
+		A1D1AECE1CD3260F0022AE1B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1AECD1CD3260F0022AE1B /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1A51AE51CBB757A00D38F3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1A51AC81CBB757A00D38F3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1A51ACF1CBB757A00D38F3B;
+			remoteInfo = MyCocoaChina;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F1AE63B173D2420AA667E9 /* Pods-MyCocoaChina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCocoaChina.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCocoaChina/Pods-MyCocoaChina.release.xcconfig"; sourceTree = "<group>"; };
+		24026D49B0341217BCB4E3AC /* Pods-MyCocoaChina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCocoaChina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCocoaChina/Pods-MyCocoaChina.debug.xcconfig"; sourceTree = "<group>"; };
+		A111E97C1E275DB100D0140E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A111E97D1E275DB100D0140E /* JSQWebViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQWebViewController.framework; path = Carthage/Build/iOS/JSQWebViewController.framework; sourceTree = "<group>"; };
+		A111E97E1E275DB100D0140E /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
+		A111E97F1E275DB100D0140E /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		A111E9801E275DB100D0140E /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		A175D0251D98F31400F47160 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A175D0261D98F31400F47160 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		A1A51AD01CBB757A00D38F3B /* MyCocoaChina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCocoaChina.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A51AD31CBB757A00D38F3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1A51AD81CBB757A00D38F3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1A51ADA1CBB757A00D38F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1A51ADD1CBB757A00D38F3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1A51ADF1CBB757A00D38F3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A51AE41CBB757A00D38F3B /* MyCocoaChinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCocoaChinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A51AE81CBB757A00D38F3B /* MyCocoaChinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCocoaChinaUITests.swift; sourceTree = "<group>"; };
+		A1A51AEA1CBB757A00D38F3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A51AF51CBB765A00D38F3B /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NewsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A1A51AF71CBB793300D38F3B /* SettingValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingValue.swift; sourceTree = "<group>"; };
+		A1A51AF91CBB7ECA00D38F3B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
+		A1A51B9F1CBE10E200D38F3B /* OpenCCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCCService.h; sourceTree = "<group>"; };
+		A1A51BA01CBE10E200D38F3B /* OpenCCService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCCService.mm; sourceTree = "<group>"; };
+		A1A51BBE1CBE133B00D38F3B /* darts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = darts.h; sourceTree = "<group>"; };
+		A1A51BC01CBE136000D38F3B /* document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		A1A51BC11CBE136000D38F3B /* filestream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
+		A1A51BC31CBE136D00D38F3B /* pow10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
+		A1A51BC41CBE136D00D38F3B /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		A1A51BC51CBE136D00D38F3B /* strfunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strfunc.h; sourceTree = "<group>"; };
+		A1A51BC61CBE137500D38F3B /* prettywriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prettywriter.h; sourceTree = "<group>"; };
+		A1A51BC71CBE137500D38F3B /* rapidjson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rapidjson.h; sourceTree = "<group>"; };
+		A1A51BC81CBE137500D38F3B /* reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		A1A51BC91CBE137500D38F3B /* stringbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
+		A1A51BCA1CBE137500D38F3B /* writer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		A1A51BCC1CBE139200D38F3B /* BinaryDict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryDict.cpp; sourceTree = "<group>"; };
+		A1A51BCD1CBE139200D38F3B /* BinaryDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryDict.hpp; sourceTree = "<group>"; };
+		A1A51BCE1CBE139200D38F3B /* CmdLineOutput.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CmdLineOutput.hpp; sourceTree = "<group>"; };
+		A1A51BCF1CBE139200D38F3B /* Common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Common.hpp; sourceTree = "<group>"; };
+		A1A51BD01CBE139200D38F3B /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		A1A51BD11CBE139200D38F3B /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
+		A1A51BD21CBE139200D38F3B /* Conversion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Conversion.cpp; sourceTree = "<group>"; };
+		A1A51BD31CBE139200D38F3B /* Conversion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Conversion.hpp; sourceTree = "<group>"; };
+		A1A51BD41CBE139200D38F3B /* ConversionChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConversionChain.cpp; sourceTree = "<group>"; };
+		A1A51BD51CBE139200D38F3B /* ConversionChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConversionChain.hpp; sourceTree = "<group>"; };
+		A1A51BD61CBE139200D38F3B /* Converter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Converter.cpp; sourceTree = "<group>"; };
+		A1A51BD71CBE139200D38F3B /* Converter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Converter.hpp; sourceTree = "<group>"; };
+		A1A51BD81CBE139200D38F3B /* DartsDict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DartsDict.cpp; sourceTree = "<group>"; };
+		A1A51BD91CBE139200D38F3B /* DartsDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DartsDict.hpp; sourceTree = "<group>"; };
+		A1A51BDA1CBE139200D38F3B /* Dict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dict.cpp; sourceTree = "<group>"; };
+		A1A51BDB1CBE139200D38F3B /* Dict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dict.hpp; sourceTree = "<group>"; };
+		A1A51BDC1CBE139200D38F3B /* DictEntry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DictEntry.cpp; sourceTree = "<group>"; };
+		A1A51BDD1CBE139200D38F3B /* DictEntry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DictEntry.hpp; sourceTree = "<group>"; };
+		A1A51BDE1CBE139200D38F3B /* DictGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DictGroup.cpp; sourceTree = "<group>"; };
+		A1A51BDF1CBE139200D38F3B /* DictGroup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DictGroup.hpp; sourceTree = "<group>"; };
+		A1A51BE01CBE139200D38F3B /* Exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Exception.hpp; sourceTree = "<group>"; };
+		A1A51BE11CBE139200D38F3B /* Export.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Export.hpp; sourceTree = "<group>"; };
+		A1A51BE21CBE139200D38F3B /* Lexicon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lexicon.hpp; sourceTree = "<group>"; };
+		A1A51BE31CBE139200D38F3B /* MaxMatchSegmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxMatchSegmentation.cpp; sourceTree = "<group>"; };
+		A1A51BE41CBE139200D38F3B /* MaxMatchSegmentation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxMatchSegmentation.hpp; sourceTree = "<group>"; };
+		A1A51BE51CBE139200D38F3B /* opencc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opencc.h; sourceTree = "<group>"; };
+		A1A51BE61CBE139200D38F3B /* Optional.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Optional.hpp; sourceTree = "<group>"; };
+		A1A51BE71CBE139200D38F3B /* PhraseExtract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhraseExtract.cpp; sourceTree = "<group>"; };
+		A1A51BE81CBE139200D38F3B /* PhraseExtract.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PhraseExtract.hpp; sourceTree = "<group>"; };
+		A1A51BE91CBE139200D38F3B /* Segmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Segmentation.cpp; sourceTree = "<group>"; };
+		A1A51BEA1CBE139200D38F3B /* Segmentation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Segmentation.hpp; sourceTree = "<group>"; };
+		A1A51BEB1CBE139200D38F3B /* Segments.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Segments.hpp; sourceTree = "<group>"; };
+		A1A51BEC1CBE139200D38F3B /* SerializableDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SerializableDict.hpp; sourceTree = "<group>"; };
+		A1A51BED1CBE139200D38F3B /* SimpleConverter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleConverter.cpp; sourceTree = "<group>"; };
+		A1A51BEE1CBE139200D38F3B /* SimpleConverter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimpleConverter.hpp; sourceTree = "<group>"; };
+		A1A51BEF1CBE139200D38F3B /* TestUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestUtils.hpp; sourceTree = "<group>"; };
+		A1A51BF01CBE139200D38F3B /* TextDict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextDict.cpp; sourceTree = "<group>"; };
+		A1A51BF11CBE139200D38F3B /* TextDict.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextDict.hpp; sourceTree = "<group>"; };
+		A1A51BF21CBE139200D38F3B /* UTF8StringSlice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UTF8StringSlice.cpp; sourceTree = "<group>"; };
+		A1A51BF31CBE139200D38F3B /* UTF8StringSlice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UTF8StringSlice.hpp; sourceTree = "<group>"; };
+		A1A51BF41CBE139200D38F3B /* UTF8Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UTF8Util.cpp; sourceTree = "<group>"; };
+		A1A51BF51CBE139200D38F3B /* UTF8Util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UTF8Util.hpp; sourceTree = "<group>"; };
+		A1A51C071CBE13A600D38F3B /* HKVariants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HKVariants.txt; sourceTree = "<group>"; };
+		A1A51C081CBE13A600D38F3B /* HKVariantsPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HKVariantsPhrases.txt; sourceTree = "<group>"; };
+		A1A51C091CBE13A600D38F3B /* HKVariantsRevPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HKVariantsRevPhrases.txt; sourceTree = "<group>"; };
+		A1A51C0A1CBE13A600D38F3B /* JPVariants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JPVariants.txt; sourceTree = "<group>"; };
+		A1A51C0B1CBE13A600D38F3B /* STCharacters.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = STCharacters.txt; sourceTree = "<group>"; };
+		A1A51C0C1CBE13A600D38F3B /* STPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = STPhrases.txt; sourceTree = "<group>"; };
+		A1A51C0D1CBE13A600D38F3B /* TSCharacters.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSCharacters.txt; sourceTree = "<group>"; };
+		A1A51C0E1CBE13A600D38F3B /* TSPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSPhrases.txt; sourceTree = "<group>"; };
+		A1A51C0F1CBE13A600D38F3B /* TWPhrasesIT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWPhrasesIT.txt; sourceTree = "<group>"; };
+		A1A51C101CBE13A600D38F3B /* TWPhrasesName.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWPhrasesName.txt; sourceTree = "<group>"; };
+		A1A51C111CBE13A600D38F3B /* TWPhrasesOther.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWPhrasesOther.txt; sourceTree = "<group>"; };
+		A1A51C121CBE13A600D38F3B /* TWVariants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWVariants.txt; sourceTree = "<group>"; };
+		A1A51C131CBE13A600D38F3B /* TWVariantsRevPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TWVariantsRevPhrases.txt; sourceTree = "<group>"; };
+		A1A51C221CBE13B600D38F3B /* hk2s.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hk2s.json; sourceTree = "<group>"; };
+		A1A51C231CBE13B600D38F3B /* s2hk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2hk.json; sourceTree = "<group>"; };
+		A1A51C241CBE13B600D38F3B /* s2t.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2t.json; sourceTree = "<group>"; };
+		A1A51C251CBE13B600D38F3B /* s2tw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2tw.json; sourceTree = "<group>"; };
+		A1A51C261CBE13B600D38F3B /* s2twp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = s2twp.json; sourceTree = "<group>"; };
+		A1A51C271CBE13B600D38F3B /* t2hk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2hk.json; sourceTree = "<group>"; };
+		A1A51C281CBE13B600D38F3B /* t2s.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2s.json; sourceTree = "<group>"; };
+		A1A51C291CBE13B600D38F3B /* t2tw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2tw.json; sourceTree = "<group>"; };
+		A1A51C2A1CBE13B600D38F3B /* tw2s.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tw2s.json; sourceTree = "<group>"; };
+		A1A51C2B1CBE13B600D38F3B /* tw2sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tw2sp.json; sourceTree = "<group>"; };
+		A1A51C361CBE189900D38F3B /* OpenCCService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCCService-Bridging-Header.h"; sourceTree = "<group>"; };
+		A1A51C3A1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCocoaDB.xcdatamodel; sourceTree = "<group>"; };
+		A1A51C481CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReadNewsData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1A51C491CBE32AF00D38F3B /* ReadNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadNewsData.swift; sourceTree = "<group>"; };
+		A1A51C4A1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionNewsData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1A51C4B1CBE32AF00D38F3B /* CollectionNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNewsData.swift; sourceTree = "<group>"; };
+		A1A51C501CBE430400D38F3B /* NewsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NewsCollectionViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A1D1AECD1CD3260F0022AE1B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B9D457ED9E34DC5662E0EDDE /* Pods_MyCocoaChina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCocoaChina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1A51ACD1CBB757A00D38F3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1AECE1CD3260F0022AE1B /* WebKit.framework in Frameworks */,
+				9A2CDD57D48BB7F00272060E /* Pods_MyCocoaChina.framework in Frameworks */,
+				A111E9811E275DB100D0140E /* Alamofire.framework in Frameworks */,
+				A111E9821E275DB100D0140E /* JSQWebViewController.framework in Frameworks */,
+				A111E9831E275DB100D0140E /* MagicalRecord.framework in Frameworks */,
+				A111E9841E275DB100D0140E /* MBProgressHUD.framework in Frameworks */,
+				A111E9851E275DB100D0140E /* WebImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A51AE11CBB757A00D38F3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56B654C6D211C5C3D7259516 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24026D49B0341217BCB4E3AC /* Pods-MyCocoaChina.debug.xcconfig */,
+				07F1AE63B173D2420AA667E9 /* Pods-MyCocoaChina.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A111E97A1E274F4000D0140E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = OpenCCiOS;
+			sourceTree = "<group>";
+		};
+		A1A51AC71CBB757A00D38F3B = {
+			isa = PBXGroup;
+			children = (
+				BB3EBC7EA04E6449AA360459 /* Frameworks */,
+				A1A51AD21CBB757A00D38F3B /* MyCocoaChina */,
+				A1A51AE71CBB757A00D38F3B /* MyCocoaChinaUITests */,
+				A1A51AD11CBB757A00D38F3B /* Products */,
+				56B654C6D211C5C3D7259516 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A1A51AD11CBB757A00D38F3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51AD01CBB757A00D38F3B /* MyCocoaChina.app */,
+				A1A51AE41CBB757A00D38F3B /* MyCocoaChinaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1A51AD21CBB757A00D38F3B /* MyCocoaChina */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51AFE1CBE101100D38F3B /* tool */,
+				A1A51AF41CBB762900D38F3B /* 收藏 */,
+				A1A51AF31CBB762300D38F3B /* 新聞 */,
+				A1A51AD31CBB757A00D38F3B /* AppDelegate.swift */,
+				A1A51ADA1CBB757A00D38F3B /* Assets.xcassets */,
+				A1A51ADF1CBB757A00D38F3B /* Info.plist */,
+				A1A51ADC1CBB757A00D38F3B /* LaunchScreen.storyboard */,
+				A1A51AD71CBB757A00D38F3B /* Main.storyboard */,
+				A1A51AFC1CBD06FC00D38F3B /* MyWebViewController.swift */,
+				A1A51AF71CBB793300D38F3B /* SettingValue.swift */,
+			);
+			path = MyCocoaChina;
+			sourceTree = "<group>";
+		};
+		A1A51AE71CBB757A00D38F3B /* MyCocoaChinaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51AEA1CBB757A00D38F3B /* Info.plist */,
+				A1A51AE81CBB757A00D38F3B /* MyCocoaChinaUITests.swift */,
+			);
+			path = MyCocoaChinaUITests;
+			sourceTree = "<group>";
+		};
+		A1A51AF31CBB762300D38F3B /* 新聞 */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51AFB1CBB7ECE00D38F3B /* Cell */,
+				A1A51AF51CBB765A00D38F3B /* NewsViewController.swift */,
+			);
+			path = "新聞";
+			sourceTree = "<group>";
+		};
+		A1A51AF41CBB762900D38F3B /* 收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C501CBE430400D38F3B /* NewsCollectionViewController.swift */,
+			);
+			path = "收藏";
+			sourceTree = "<group>";
+		};
+		A1A51AFB1CBB7ECE00D38F3B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51AF91CBB7ECA00D38F3B /* NewsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A1A51AFE1CBE101100D38F3B /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C381CBE2C6100D38F3B /* CoreData */,
+				A111E97A1E274F4000D0140E /* Model */,
+				A1A51C371CBE2BDB00D38F3B /* OpenCCiOS */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		A1A51BBD1CBE131000D38F3B /* darts-clone */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BBE1CBE133B00D38F3B /* darts.h */,
+			);
+			path = "darts-clone";
+			sourceTree = "<group>";
+		};
+		A1A51BBF1CBE135900D38F3B /* rapidjson-0.11 */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BC21CBE136600D38F3B /* internal */,
+				A1A51BC01CBE136000D38F3B /* document.h */,
+				A1A51BC11CBE136000D38F3B /* filestream.h */,
+				A1A51BC61CBE137500D38F3B /* prettywriter.h */,
+				A1A51BC71CBE137500D38F3B /* rapidjson.h */,
+				A1A51BC81CBE137500D38F3B /* reader.h */,
+				A1A51BC91CBE137500D38F3B /* stringbuffer.h */,
+				A1A51BCA1CBE137500D38F3B /* writer.h */,
+			);
+			path = "rapidjson-0.11";
+			sourceTree = "<group>";
+		};
+		A1A51BC21CBE136600D38F3B /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BC31CBE136D00D38F3B /* pow10.h */,
+				A1A51BC41CBE136D00D38F3B /* stack.h */,
+				A1A51BC51CBE136D00D38F3B /* strfunc.h */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		A1A51BCB1CBE138400D38F3B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51BCC1CBE139200D38F3B /* BinaryDict.cpp */,
+				A1A51BCD1CBE139200D38F3B /* BinaryDict.hpp */,
+				A1A51BCE1CBE139200D38F3B /* CmdLineOutput.hpp */,
+				A1A51BCF1CBE139200D38F3B /* Common.hpp */,
+				A1A51BD01CBE139200D38F3B /* Config.cpp */,
+				A1A51BD11CBE139200D38F3B /* Config.hpp */,
+				A1A51BD21CBE139200D38F3B /* Conversion.cpp */,
+				A1A51BD31CBE139200D38F3B /* Conversion.hpp */,
+				A1A51BD41CBE139200D38F3B /* ConversionChain.cpp */,
+				A1A51BD51CBE139200D38F3B /* ConversionChain.hpp */,
+				A1A51BD61CBE139200D38F3B /* Converter.cpp */,
+				A1A51BD71CBE139200D38F3B /* Converter.hpp */,
+				A1A51BD81CBE139200D38F3B /* DartsDict.cpp */,
+				A1A51BD91CBE139200D38F3B /* DartsDict.hpp */,
+				A1A51BDA1CBE139200D38F3B /* Dict.cpp */,
+				A1A51BDB1CBE139200D38F3B /* Dict.hpp */,
+				A1A51BDC1CBE139200D38F3B /* DictEntry.cpp */,
+				A1A51BDD1CBE139200D38F3B /* DictEntry.hpp */,
+				A1A51BDE1CBE139200D38F3B /* DictGroup.cpp */,
+				A1A51BDF1CBE139200D38F3B /* DictGroup.hpp */,
+				A1A51BE01CBE139200D38F3B /* Exception.hpp */,
+				A1A51BE11CBE139200D38F3B /* Export.hpp */,
+				A1A51BE21CBE139200D38F3B /* Lexicon.hpp */,
+				A1A51BE31CBE139200D38F3B /* MaxMatchSegmentation.cpp */,
+				A1A51BE41CBE139200D38F3B /* MaxMatchSegmentation.hpp */,
+				A1A51BE61CBE139200D38F3B /* Optional.hpp */,
+				A1A51BE71CBE139200D38F3B /* PhraseExtract.cpp */,
+				A1A51BE81CBE139200D38F3B /* PhraseExtract.hpp */,
+				A1A51BE91CBE139200D38F3B /* Segmentation.cpp */,
+				A1A51BEA1CBE139200D38F3B /* Segmentation.hpp */,
+				A1A51BEB1CBE139200D38F3B /* Segments.hpp */,
+				A1A51BEC1CBE139200D38F3B /* SerializableDict.hpp */,
+				A1A51BED1CBE139200D38F3B /* SimpleConverter.cpp */,
+				A1A51BEE1CBE139200D38F3B /* SimpleConverter.hpp */,
+				A1A51BEF1CBE139200D38F3B /* TestUtils.hpp */,
+				A1A51BF01CBE139200D38F3B /* TextDict.cpp */,
+				A1A51BF11CBE139200D38F3B /* TextDict.hpp */,
+				A1A51BF21CBE139200D38F3B /* UTF8StringSlice.cpp */,
+				A1A51BF31CBE139200D38F3B /* UTF8StringSlice.hpp */,
+				A1A51BF41CBE139200D38F3B /* UTF8Util.cpp */,
+				A1A51BF51CBE139200D38F3B /* UTF8Util.hpp */,
+				A1A51BE51CBE139200D38F3B /* opencc.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A1A51C061CBE139B00D38F3B /* dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C071CBE13A600D38F3B /* HKVariants.txt */,
+				A1A51C081CBE13A600D38F3B /* HKVariantsPhrases.txt */,
+				A1A51C091CBE13A600D38F3B /* HKVariantsRevPhrases.txt */,
+				A1A51C0A1CBE13A600D38F3B /* JPVariants.txt */,
+				A1A51C0B1CBE13A600D38F3B /* STCharacters.txt */,
+				A1A51C0C1CBE13A600D38F3B /* STPhrases.txt */,
+				A1A51C0D1CBE13A600D38F3B /* TSCharacters.txt */,
+				A1A51C0E1CBE13A600D38F3B /* TSPhrases.txt */,
+				A1A51C0F1CBE13A600D38F3B /* TWPhrasesIT.txt */,
+				A1A51C101CBE13A600D38F3B /* TWPhrasesName.txt */,
+				A1A51C111CBE13A600D38F3B /* TWPhrasesOther.txt */,
+				A1A51C121CBE13A600D38F3B /* TWVariants.txt */,
+				A1A51C131CBE13A600D38F3B /* TWVariantsRevPhrases.txt */,
+			);
+			path = dictionary;
+			sourceTree = "<group>";
+		};
+		A1A51C211CBE13AD00D38F3B /* config */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C221CBE13B600D38F3B /* hk2s.json */,
+				A1A51C231CBE13B600D38F3B /* s2hk.json */,
+				A1A51C241CBE13B600D38F3B /* s2t.json */,
+				A1A51C251CBE13B600D38F3B /* s2tw.json */,
+				A1A51C261CBE13B600D38F3B /* s2twp.json */,
+				A1A51C271CBE13B600D38F3B /* t2hk.json */,
+				A1A51C281CBE13B600D38F3B /* t2s.json */,
+				A1A51C291CBE13B600D38F3B /* t2tw.json */,
+				A1A51C2A1CBE13B600D38F3B /* tw2s.json */,
+				A1A51C2B1CBE13B600D38F3B /* tw2sp.json */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		A1A51C371CBE2BDB00D38F3B /* OpenCCiOS */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C211CBE13AD00D38F3B /* config */,
+				A1A51BBD1CBE131000D38F3B /* darts-clone */,
+				A1A51C061CBE139B00D38F3B /* dictionary */,
+				A1A51BBF1CBE135900D38F3B /* rapidjson-0.11 */,
+				A1A51BCB1CBE138400D38F3B /* src */,
+				A1A51C361CBE189900D38F3B /* OpenCCService-Bridging-Header.h */,
+				A1A51B9F1CBE10E200D38F3B /* OpenCCService.h */,
+				A1A51BA01CBE10E200D38F3B /* OpenCCService.mm */,
+			);
+			path = OpenCCiOS;
+			sourceTree = "<group>";
+		};
+		A1A51C381CBE2C6100D38F3B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A1A51C4A1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift */,
+				A1A51C4B1CBE32AF00D38F3B /* CollectionNewsData.swift */,
+				A1A51C391CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld */,
+				A1A51C481CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift */,
+				A1A51C491CBE32AF00D38F3B /* ReadNewsData.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BB3EBC7EA04E6449AA360459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A111E97C1E275DB100D0140E /* Alamofire.framework */,
+				A111E97D1E275DB100D0140E /* JSQWebViewController.framework */,
+				A111E97E1E275DB100D0140E /* MagicalRecord.framework */,
+				A111E97F1E275DB100D0140E /* MBProgressHUD.framework */,
+				A111E9801E275DB100D0140E /* WebImage.framework */,
+				A1D1AECD1CD3260F0022AE1B /* WebKit.framework */,
+				B9D457ED9E34DC5662E0EDDE /* Pods_MyCocoaChina.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1A51ACF1CBB757A00D38F3B /* MyCocoaChina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A51AED1CBB757A00D38F3B /* Build configuration list for PBXNativeTarget "MyCocoaChina" */;
+			buildPhases = (
+				D74C7146BDA0620FFF496002 /* [CP] Check Pods Manifest.lock */,
+				A1A51ACC1CBB757A00D38F3B /* Sources */,
+				A1A51ACD1CBB757A00D38F3B /* Frameworks */,
+				A1A51ACE1CBB757A00D38F3B /* Resources */,
+				FB5B1CA694706F8ADC80B92C /* [CP] Embed Pods Frameworks */,
+				8AC5C5C143F707EE81D3E1F8 /* [CP] Copy Pods Resources */,
+				A111E9861E275DEC00D0140E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCocoaChina;
+			productName = MyCocoaChina;
+			productReference = A1A51AD01CBB757A00D38F3B /* MyCocoaChina.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1A51AE31CBB757A00D38F3B /* MyCocoaChinaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A51AF01CBB757A00D38F3B /* Build configuration list for PBXNativeTarget "MyCocoaChinaUITests" */;
+			buildPhases = (
+				A1A51AE01CBB757A00D38F3B /* Sources */,
+				A1A51AE11CBB757A00D38F3B /* Frameworks */,
+				A1A51AE21CBB757A00D38F3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1A51AE61CBB757A00D38F3B /* PBXTargetDependency */,
+			);
+			name = MyCocoaChinaUITests;
+			productName = MyCocoaChinaUITests;
+			productReference = A1A51AE41CBB757A00D38F3B /* MyCocoaChinaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1A51AC81CBB757A00D38F3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LeeTenten;
+				TargetAttributes = {
+					A1A51ACF1CBB757A00D38F3B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = E5EPLTYPR9;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					A1A51AE31CBB757A00D38F3B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = E5EPLTYPR9;
+						LastSwiftMigration = 0820;
+						TestTargetID = A1A51ACF1CBB757A00D38F3B;
+					};
+				};
+			};
+			buildConfigurationList = A1A51ACB1CBB757A00D38F3B /* Build configuration list for PBXProject "MyCocoaChina" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1A51AC71CBB757A00D38F3B;
+			productRefGroup = A1A51AD11CBB757A00D38F3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1A51ACF1CBB757A00D38F3B /* MyCocoaChina */,
+				A1A51AE31CBB757A00D38F3B /* MyCocoaChinaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1A51ACE1CBB757A00D38F3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A51C321CBE13B600D38F3B /* t2s.json in Resources */,
+				A1A51C1D1CBE13A600D38F3B /* TWPhrasesName.txt in Resources */,
+				A1A51C171CBE13A600D38F3B /* JPVariants.txt in Resources */,
+				A1A51C191CBE13A600D38F3B /* STPhrases.txt in Resources */,
+				A1A51C351CBE13B600D38F3B /* tw2sp.json in Resources */,
+				A1A51ADE1CBB757A00D38F3B /* LaunchScreen.storyboard in Resources */,
+				A1A51ADB1CBB757A00D38F3B /* Assets.xcassets in Resources */,
+				A1A51C2C1CBE13B600D38F3B /* hk2s.json in Resources */,
+				A1A51C1E1CBE13A600D38F3B /* TWPhrasesOther.txt in Resources */,
+				A1A51C161CBE13A600D38F3B /* HKVariantsRevPhrases.txt in Resources */,
+				A1A51C311CBE13B600D38F3B /* t2hk.json in Resources */,
+				A1A51C331CBE13B600D38F3B /* t2tw.json in Resources */,
+				A1A51C2E1CBE13B600D38F3B /* s2t.json in Resources */,
+				A1A51C1A1CBE13A600D38F3B /* TSCharacters.txt in Resources */,
+				A1A51C1F1CBE13A600D38F3B /* TWVariants.txt in Resources */,
+				A1A51C301CBE13B600D38F3B /* s2twp.json in Resources */,
+				A1A51AD91CBB757A00D38F3B /* Main.storyboard in Resources */,
+				A1A51C1C1CBE13A600D38F3B /* TWPhrasesIT.txt in Resources */,
+				A1A51C1B1CBE13A600D38F3B /* TSPhrases.txt in Resources */,
+				A1A51C201CBE13A600D38F3B /* TWVariantsRevPhrases.txt in Resources */,
+				A1A51C181CBE13A600D38F3B /* STCharacters.txt in Resources */,
+				A1A51C2D1CBE13B600D38F3B /* s2hk.json in Resources */,
+				A1A51C2F1CBE13B600D38F3B /* s2tw.json in Resources */,
+				A1A51C341CBE13B600D38F3B /* tw2s.json in Resources */,
+				A1A51C151CBE13A600D38F3B /* HKVariantsPhrases.txt in Resources */,
+				A1A51C141CBE13A600D38F3B /* HKVariants.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A51AE21CBB757A00D38F3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AC5C5C143F707EE81D3E1F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCocoaChina/Pods-MyCocoaChina-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A111E9861E275DEC00D0140E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JSQWebViewController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MagicalRecord.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		D74C7146BDA0620FFF496002 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB5B1CA694706F8ADC80B92C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCocoaChina/Pods-MyCocoaChina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1A51ACC1CBB757A00D38F3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A51C021CBE139200D38F3B /* SimpleConverter.cpp in Sources */,
+				A1A51AD41CBB757A00D38F3B /* AppDelegate.swift in Sources */,
+				A1A51C4F1CBE32AF00D38F3B /* CollectionNewsData.swift in Sources */,
+				A1A51BF71CBE139200D38F3B /* Config.cpp in Sources */,
+				A1A51AFD1CBD06FC00D38F3B /* MyWebViewController.swift in Sources */,
+				A1A51BA11CBE10E200D38F3B /* OpenCCService.mm in Sources */,
+				A1A51BFB1CBE139200D38F3B /* DartsDict.cpp in Sources */,
+				A1A51BFE1CBE139200D38F3B /* DictGroup.cpp in Sources */,
+				A1A51C4D1CBE32AF00D38F3B /* ReadNewsData.swift in Sources */,
+				A1A51AF81CBB793300D38F3B /* SettingValue.swift in Sources */,
+				A1A51C3B1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld in Sources */,
+				A1A51C4E1CBE32AF00D38F3B /* CollectionNewsData+CoreDataProperties.swift in Sources */,
+				A1A51AFA1CBB7ECA00D38F3B /* NewsCell.swift in Sources */,
+				A1A51BF61CBE139200D38F3B /* BinaryDict.cpp in Sources */,
+				A1A51C041CBE139200D38F3B /* UTF8StringSlice.cpp in Sources */,
+				A1A51C031CBE139200D38F3B /* TextDict.cpp in Sources */,
+				A1A51BFA1CBE139200D38F3B /* Converter.cpp in Sources */,
+				A1A51C4C1CBE32AF00D38F3B /* ReadNewsData+CoreDataProperties.swift in Sources */,
+				A1A51BFF1CBE139200D38F3B /* MaxMatchSegmentation.cpp in Sources */,
+				A1A51BFC1CBE139200D38F3B /* Dict.cpp in Sources */,
+				A1A51BFD1CBE139200D38F3B /* DictEntry.cpp in Sources */,
+				A1A51C011CBE139200D38F3B /* Segmentation.cpp in Sources */,
+				A1A51BF91CBE139200D38F3B /* ConversionChain.cpp in Sources */,
+				A1A51BF81CBE139200D38F3B /* Conversion.cpp in Sources */,
+				A1A51AF61CBB765A00D38F3B /* NewsViewController.swift in Sources */,
+				A1A51C511CBE430400D38F3B /* NewsCollectionViewController.swift in Sources */,
+				A1A51C051CBE139200D38F3B /* UTF8Util.cpp in Sources */,
+				A1A51C001CBE139200D38F3B /* PhraseExtract.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A51AE01CBB757A00D38F3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A51AE91CBB757A00D38F3B /* MyCocoaChinaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1A51AE61CBB757A00D38F3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1A51ACF1CBB757A00D38F3B /* MyCocoaChina */;
+			targetProxy = A1A51AE51CBB757A00D38F3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1A51AD71CBB757A00D38F3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A51AD81CBB757A00D38F3B /* Base */,
+				A175D0261D98F31400F47160 /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		A1A51ADC1CBB757A00D38F3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A51ADD1CBB757A00D38F3B /* Base */,
+				A175D0251D98F31400F47160 /* zh-Hant */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1A51AEB1CBB757A00D38F3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1A51AEC1CBB757A00D38F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1A51AEE1CBB757A00D38F3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24026D49B0341217BCB4E3AC /* Pods-MyCocoaChina.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: han lin Li (YECSHCH823)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E5EPLTYPR9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MyCocoaChina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tenten.MyCocoaChina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyCocoaChina/tool/OpenCCiOS/OpenCCService-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A1A51AEF1CBB757A00D38F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F1AE63B173D2420AA667E9 /* Pods-MyCocoaChina.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E5EPLTYPR9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MyCocoaChina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tenten.MyCocoaChina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyCocoaChina/tool/OpenCCiOS/OpenCCService-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A1A51AF11CBB757A00D38F3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = E5EPLTYPR9;
+				INFOPLIST_FILE = MyCocoaChinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddmc.MyCocoaChinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MyCocoaChina;
+			};
+			name = Debug;
+		};
+		A1A51AF21CBB757A00D38F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = E5EPLTYPR9;
+				INFOPLIST_FILE = MyCocoaChinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddmc.MyCocoaChinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MyCocoaChina;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1A51ACB1CBB757A00D38F3B /* Build configuration list for PBXProject "MyCocoaChina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A51AEB1CBB757A00D38F3B /* Debug */,
+				A1A51AEC1CBB757A00D38F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A51AED1CBB757A00D38F3B /* Build configuration list for PBXNativeTarget "MyCocoaChina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A51AEE1CBB757A00D38F3B /* Debug */,
+				A1A51AEF1CBB757A00D38F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A51AF01CBB757A00D38F3B /* Build configuration list for PBXNativeTarget "MyCocoaChinaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A51AF11CBB757A00D38F3B /* Debug */,
+				A1A51AF21CBB757A00D38F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1A51C391CBE2CA400D38F3B /* MyCocoaDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1A51C3A1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodel */,
+			);
+			currentVersion = A1A51C3A1CBE2CA400D38F3B /* MyCocoaDB.xcdatamodel */;
+			path = MyCocoaDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A1A51AC81CBB757A00D38F3B /* Project object */;
+}

@@ -1,0 +1,28 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform:ios, '8.0'
+use_frameworks!
+
+def default_pods
+    ##pod 'SDWebImage'
+    ##pod 'Alamofire'
+    ##pod 'MagicalRecord'
+    ##pod 'MBProgressHUD'
+    #pod 'NYXImagesKit'
+    #pod 'UIImage+Additions'
+    pod 'MJRefresh'
+    #pod 'ActionSheetPicker-3.0'
+    #pod 'IDMPhotoBrowser'
+    #pod 'RDVTabBarController'
+    #pod 'SAMKeychain'
+    #pod 'UIImage+BlurredFrame'
+    #pod 'UIAlertController+Blocks'
+    #pod 'IQKeyboardManagerSwift'
+    #pod 'SWXMLHash'
+    pod 'Kanna'
+    ##pod 'JSQWebViewController'
+end
+
+target 'MyCocoaChina' do
+    default_pods
+end
+

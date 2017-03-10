@@ -1,0 +1,15 @@
+PODS:
+  - Kanna (2.1.1)
+  - MJRefresh (3.1.12)
+
+DEPENDENCIES:
+  - Kanna
+  - MJRefresh
+
+SPEC CHECKSUMS:
+  Kanna: 9b4b086c218703f2b94f5b21a466217dd2f9332e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+
+PODFILE CHECKSUM: ee1c4bd2913fc2f3141a097e029025dce297f743
+
+COCOAPODS: 1.2.0.beta.3
