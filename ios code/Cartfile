@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire"
+github "rs/SDWebImage"
+github "MagicalPanda/MagicalRecord"
+github "jdg/MBProgressHUD"
+github "jessesquires/JSQWebViewController"
